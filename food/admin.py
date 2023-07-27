@@ -24,3 +24,11 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'body', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
     search_fields = ('name', 'email', 'body')
+    actions = ['approve_comments']
+
+    def approve_comments(self, request, queryset):
+        """
+        This method changes the default approve value to True
+        and maintains this value on comments updates too
+        """
+        queryset.update(approved=True)
