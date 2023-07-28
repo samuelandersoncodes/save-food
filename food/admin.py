@@ -12,7 +12,7 @@ class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'status', 'created_on')
     prepopulated_fields = {'slug': ('title',)}
     list_filter = ('status', 'created_on')
-    search_fields = ('title', 'content')
+    search_fields = ('title', 'item_description')
 
 
 @admin.register(Comment)
