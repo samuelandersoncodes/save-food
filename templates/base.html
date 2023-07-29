@@ -14,10 +14,51 @@
 </head>
 
 <body>
-   
+    <header>
+        <!-- Navigation links -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand logo">
+                    <i class="fa-solid fa-plate-wheat"></i>Save Food
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarText"
+                    aria-controls="navbarText">
+                    <span class="visually-hidden">Hamburger Icon</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" id="navbarText">
+                    <div class="offcanvas-header">
+                        <h1 class="offcanvas-title logo" id="offcanvasNavbarLabel">
+                            <i class="fa-solid fa-plate-wheat"></i>Save Food
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <ul class="navbar-nav justify-content-end navigation">
+                        <li class="nav-item flex a-center active" id="home-nav">
+                            <i class="fas fa-home d-none d-lg-block"></i>
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item flex a-center" id="logout-nav">
+                            <i class="fa-solid fa-arrow-right-from-bracket d-none d-lg-block"></i>
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal"
+                                href="#">Logout</a>
+                        </li>
+                        <li class="nav-item flex a-center" id="login-nav">
+                            <i class="fa-solid fa-arrow-right-to-bracket d-none d-lg-block"></i>
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                        <li class="nav-item flex a-center" id="signup-nav">
+                            <i class="fa-solid fa-right-to-bracket d-none d-lg-block"></i>
+                            <a class="nav-link" href="#">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-    </script>   
+    </script>
     <script src="https://kit.fontawesome.com/b6d3775a16.js" crossorigin="anonymous"></script>
 </body>
 
