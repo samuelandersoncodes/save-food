@@ -57,12 +57,34 @@
         </nav>
     </header>
     <main class="flex-shrink-0 bg-transparent">
-       
+
     </main>
+    <!-- Footer -->
+    <footer class="footer mt-auto py-4">
+        <p class="m-0 text-center">
+            copyright &copy;<span id="copyright-date"></span> savefood
+        </p>
+        <p class="m-0 text-center ">
+            follow us:
+        </p>
+        <div class="text-center">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Link to instagram page"><i
+                    class="fab fa-instagram-square fa-lg ms-3"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Link to facebook page"><i
+                    class="fab fa-facebook-square fa-lg ms-3 "></i></a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener" aria-label="Link to twitter page"><i
+                    class="fab fa-twitter-square fa-lg ms-3"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="Link to youtube page"><i
+                    class="fab fa-youtube-square fa-lg ms-3"></i></a>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/b6d3775a16.js" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('copyright-date').innerHTML = (new Date().getFullYear())
+    </script>
 </body>
 
 </html>
