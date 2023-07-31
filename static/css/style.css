@@ -12,3 +12,13 @@ body {
     font-family: 'Kadwa', serif;
     scroll-behavior: smooth;
 }
+
+/* logo styling */
+.logo {
+    font-family: 'Russo One', sans-serif;
+    font-size: 200%;
+}
+
+.logo>i {
+    padding-right: 2px;
+}
