@@ -1,2 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Kadwa&family=Russo+One&display=swap');
 
+/* Generic Styles */
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #36454f;
+    font-family: 'Kadwa', serif;
+    scroll-behavior: smooth;
+}
