@@ -22,3 +22,45 @@ body {
 .logo>i {
     padding-right: 2px;
 }
+
+/* navigation styling */
+.nav-link {
+    padding-left: 1.3rem;
+}
+
+.navbar {
+    background-color: #e8e9eb9a;
+    font-family: 'Kadwa', serif;
+    font-size: 110%;
+    font-weight: 900;
+    box-shadow: rgb(0 0 0 / 9%) 0px 2px 1px,
+        rgb(0 0 0 / 3%) 0px 4px 2px,
+        rgb(0 0 0 / 3%) 0px 8px 4px,
+        rgb(0 0 0 / 3%) 0px 16px 8px,
+        rgb(0 0 0 / 3%) 0px 32px 16px;
+    z-index: 1;
+}
+
+.navbar li {
+    margin-right: 15px;
+    transition: all 0.1s ease-out;
+}
+
+.navbar li:hover:not(.active) {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: #36454f;
+}
+
+.active a {
+    color: #3a3a3a;
+}
+
+.offcanvas {
+    background-color: #e8e9ebd6;
+}
+
