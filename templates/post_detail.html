@@ -17,11 +17,11 @@
         <div class="col-md-8 test test2">
             <!-- post description -->
             <p>
-                {{ post.descritption }}
+                {{ post.description }}
             </p>
             <!-- writer of post and the created date of post -->
             <p>
-                {{ author| created_on }}
+                {{ post.author }} | {{ post.created_on }}
             </p>
             <hr>
             <div class="row">
