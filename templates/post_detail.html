@@ -6,18 +6,22 @@
     <div class="row">
         <div class="col text-center test test1">
             <!-- title of the post -->
-            <h1 class="text-center"></h1>
+            <h1 class="text-center">{{ post.title }}</h1>
             <!-- featured image -->
-            <img>
+            {% if "placeholder" in post.featured_image.url %}
+            <img src="../media/images/img_placeholder.webp" class="image-fluid w-75" alt="placeholder">
+            {% else %}
+            <img src=" {{ post.featured_image.url }}" class="image-fluid w-75" alt="posted food item">
+            {% endif %}
         </div>
         <div class="col-md-8 test test2">
             <!-- post description -->
             <p>
-
+                {{ post.descritption }}
             </p>
             <!-- writer of post and the created date of post -->
             <p>
-
+                {{ author| created_on }}
             </p>
             <hr>
             <div class="row">
@@ -25,12 +29,21 @@
                     <!-- heading for comments -->
                     <h3>Comments:</h3>
                     <div class="card-body">
+                        <!-- this for loop below iterates through each comment in comments -->
+                        {% for comment in comments %}
                         <div class="comments">
                             <p>
-
+                                <!-- writer of comments -->
+                                {{ comment.name }}
+                                <span">
+                                    <!-- comment's created date -->
+                                    {{ comment.created_on }}
+                                    </span> wrote:
                             </p>
-
+                            <!-- comment body  -->
+                            {{ comment.body }}
                         </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
