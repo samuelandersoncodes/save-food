@@ -100,3 +100,19 @@ footer {
 .p-box-2 {
     padding: 0.6rem 2.5rem;
 }
+
+/* image styling */
+img {
+    background: center center no-repeat;
+    border-radius: 5px;
+}
+
+/* comment section styling */
+.card {
+    border: none;
+    width: 100%;
+}
+
+.comments {
+    padding: 1rem;
+}
