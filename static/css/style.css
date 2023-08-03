@@ -66,19 +66,37 @@ body {
 
 /* footer styling */
 footer {
-    background-color:#e8e9ebdf;
+    background-color: #e8e9ebdf;
     box-sizing: border-box;
     z-index: 1;
 }
 
 .footer-icons a i {
-font-size: 190%;
-border-radius: 6px;
-color: #36454f;
-z-index: 2;
+    font-size: 190%;
+    border-radius: 6px;
+    color: #36454f;
+    z-index: 2;
 }
 
 .footer-icons {
     margin-top: 0.5rem;
 }
 
+/* postdetail styling */
+/* post container styling */
+.post-box {
+    height: auto;
+    margin: 1rem 0.8rem 0.3rem;
+    padding: 0.6rem;
+    background-color: #e8e9eb4e;
+    border-radius: 8px;
+}
+
+.p-box {
+    overflow: hidden;
+    color: black;
+}
+
+.p-box-2 {
+    padding: 0.6rem 2.5rem;
+}
