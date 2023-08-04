@@ -86,19 +86,17 @@ footer {
 /* post container styling */
 .post-box {
     height: auto;
-    margin: 1rem 0.8rem 0.3rem;
-    padding: 0.6rem;
-    background-color: #e8e9eb4e;
-    border-radius: 8px;
-}
-
-.p-box {
+    margin: 1rem auto;
+    padding: 0.8rem 0.5rem;
+    background-color: #e8e9eb43;
+    border-radius: 2px;
+    color: #36454f;
+    font-size: 115%;
     overflow: hidden;
-    color: black;
 }
 
 .p-box-2 {
-    padding: 0.6rem 2.5rem;
+    padding: 0.6rem 1rem;
 }
 
 /* image styling */
