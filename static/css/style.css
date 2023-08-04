@@ -121,3 +121,9 @@ img {
 .comments {
     padding: 1rem;
 }
+
+/* home page styling */
+.post-link {
+    text-decoration: none;
+    color: #36454f;
+}
