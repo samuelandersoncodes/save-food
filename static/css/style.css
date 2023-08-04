@@ -99,6 +99,13 @@ footer {
     padding: 0.6rem 1rem;
 }
 
+/* posted date and time of post details */
+.date-time {
+    color:black;
+    font-size:80%;
+    font-weight: 500;   
+}
+
 /* image styling */
 img {
     background: center center no-repeat;

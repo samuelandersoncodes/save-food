@@ -13,15 +13,15 @@
             {% else %}
             <img src=" {{ post.featured_image.url }}" class="image-fluid w-75" alt="posted food item">
             {% endif %}
+            <!-- writer of post and the created date of post -->
+            <p>
+                {{ post.author }} | <span class="date-time"> {{ post.created_on }} </span>
+            </p>
         </div>
         <div class="col-md-6 p-box p-box-2">
             <!-- post description -->
             <p>
                 {{ post.item_description }}
-            </p>
-            <!-- writer of post and the created date of post -->
-            <p>
-                {{ post.author }} | {{ post.created_on }}
             </p>
             <hr>
             <div class="row">
