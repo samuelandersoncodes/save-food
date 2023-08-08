@@ -18,14 +18,22 @@
   </div>
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
+      {{ form.non_field_errors }}
       <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
-        {{ form.as_p }}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-        <a class="button secondaryAction d-block text-decoration-none"
-          href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+        <div class="form-group fieldWrapper">
+          {{ form.login.errors }}
+          <label for="id_login">Username</label>
+          <input type="text" class="form-control" name="login" placeholder="&#xf007; enter your full name here"
+            id="id_login" minlength="1" maxlength="150">
+        </div>
+        <br>
+        <div class="form-group fieldWrapper">
+          {{ form.password.errors }}
+          <label for="id_password">Password</label>
+          <input type="password" class="form-control" name="password" id="id_password"
+            placeholder="&#xf023; enter your password here" minlength="1" maxlength="50">
+        </div>
         <button class="btn btn-secondary hvr-grow right mt-3 btn-login" type="submit">{% trans "Sign In" %}</button>
       </form>
     </div>
