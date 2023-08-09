@@ -69,7 +69,8 @@ footer {
     background-color: #e8e9ebdf;
     box-sizing: border-box;
     z-index: 1;
-}
+    bottom: 0;
+    }
 
 .footer-icons a i {
     font-size: 190%;
@@ -122,7 +123,8 @@ img {
     padding: 1rem;
 }
 
-/* login page styles */
-.btn-login {
-    margin-bottom: 11rem;
+/*  base html main container styling */
+main{
+    position: relative;
+    min-height: 80vh;
 }
