@@ -46,8 +46,7 @@
                         </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item flex a-center" id="logout-nav">
-                            <a class="nav-link" href="{% url 'account_logout' %}" data-bs-toggle="modal"
-                                data-bs-target="#logoutModal"><i
+                            <a class="nav-link" href="{% url 'account_logout' %}"><i
                                     class="fa-solid fa-arrow-right-from-bracket d-none d-lg-inline"></i>
                                 Logout
                             </a>
