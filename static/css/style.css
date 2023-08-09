@@ -128,3 +128,8 @@ main{
     position: relative;
     min-height: 80vh;
 }
+
+/*  signout container styling */
+.sign-out-container {
+    margin-top: 5rem;
+}
