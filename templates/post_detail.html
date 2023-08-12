@@ -10,9 +10,9 @@
             <h1 class="text-center">{{ post.title }}</h1>
             <!-- featured image -->
             {% if "placeholder" in post.featured_image.url %}
-            <img src="../media/images/img_placeholder.webp" class="image-fluid w-75" alt="placeholder">
+            <img src="../media/images/img_placeholder.webp" alt="placeholder">
             {% else %}
-            <img src=" {{ post.featured_image.url }}" class="image-fluid w-75" alt="posted food item">
+            <img src=" {{ post.featured_image.url }}" alt="posted food item">
             {% endif %}
             <!-- writer of post and the created date of post -->
             <p>
