@@ -5,7 +5,7 @@
 
 <div class="container post-box">
     <div class="row">
-        <div class="col-5 text-center p-box p-box-1">
+        <div class="col-md-5 text-center p-box p-box-1">
             <!-- title of the post -->
             <h1 class="text-center">{{ post.title }}</h1>
             <!-- featured image -->
@@ -18,13 +18,13 @@
             <p>
                 {{ post.author }} | <span class="date-time"> {{ post.created_on }} </span>
             </p>
-        </div>
-        <div class="col-md-6 p-box p-box-2">
+            <hr>
             <!-- post description -->
             <p>
                 {{ post.item_description }}
             </p>
-            <hr>
+        </div>
+        <div class="col-md-6 p-box p-box-2">
             <div class="row">
                 <div class="col-md-8 card mb-4  mt-3 ">
                     <!-- heading for comments -->
