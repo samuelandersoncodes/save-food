@@ -11,7 +11,8 @@
   <div class="row">
     <div class="col-md-8 mt-5 offset-md-2">
       <h2 class="fs-1">{% trans "Sign in to Save Food" %}</h2>
-      <p class="fs-5">{% blocktrans %}Welcome back to Save Food. Please log in to continue from where you left off. If you
+      <p class="fs-5">{% blocktrans %}Welcome back to Save Food. Please log in to continue from where you left off. If
+        you
         do not have an account yet, then <a class="link text-decoration-none" href="{{ signup_url }}">sign up</a>
         first.{% endblocktrans %}</p>
     </div>
@@ -21,6 +22,15 @@
       {{ form.non_field_errors }}
       <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
+        <div class="form-group fieldWrapper">
+          {{ form.login.errors }}
+          <button class="btn btn-outline-info mb-3">
+            <a href="{% provider_login_url 'google'%}" class="text-decoration-none">
+              <i class="fab fa-google"></i>
+              sign in with Google
+            </a>
+          </button>
+        </div>
         <div class="form-group fieldWrapper">
           {{ form.login.errors }}
           <label for="id_login">Username</label>
@@ -38,7 +48,8 @@
           <label for="id_remember">Remember Me</label>
           <input type="checkbox" name="remember" id="id_remember">
         </p>
-        <button class="btn btn-secondary hvr-grow right mt-2 mb-5 btn-login" type="submit">{% trans "Sign In" %}</button>
+        <button class="btn btn-secondary hvr-grow right mt-2 mb-5 btn-login"
+          type="submit">{% trans "Sign In" %}</button>
       </form>
     </div>
   </div>
