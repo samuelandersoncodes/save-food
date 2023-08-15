@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% load i18n %}
-
+{% load account socialaccount %}
 {% block head_title %}{% trans "Sign Up" %}{% endblock %}
 
 {% block content %}
@@ -19,6 +19,15 @@
       {{ form.non_field_errors }}
       <form class="signup form-group fieldWrapper" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}
+        <div class="form-group fieldWrapper">
+          {{ form.login.errors }}
+          <button class="btn btn-outline-info mb-3">
+            <a href="{% provider_login_url 'google'%}" class="text-decoration-none">
+              <i class="fab fa-google"></i>
+              sign in with Google
+            </a>
+          </button>
+        </div>
         <div>
           {{ form.username.errors }}
           <label for="id_username">Username</label>
