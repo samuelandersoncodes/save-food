@@ -19,7 +19,7 @@
       {{ form.non_field_errors }}
       <form class="signup form-group fieldWrapper" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}
-        <div class="form-group fieldWrapper">
+        <div>
           {{ form.login.errors }}
           <button class="btn btn-outline-info mb-3">
             <a href="{% provider_login_url 'google'%}" class="text-decoration-none">
