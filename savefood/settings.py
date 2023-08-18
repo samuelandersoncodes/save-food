@@ -33,7 +33,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'save-food-3b2a71b51608.herokuapp.com',
-    '8000-samuelanderson-savefood-van3cv57nm2.ws-eu103.gitpod.io'
+    '8000-samuelanderson-savefood-van3cv57nm2.ws-eu104.gitpod.io',
+    '127.0.0.1:8000'
     ]
 
 
