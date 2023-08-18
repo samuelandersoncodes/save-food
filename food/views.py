@@ -1,7 +1,11 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
+from django.views.generic import ListView
+from django.views.generic.edit import FormView
 from .models import Post
+from django.contrib import messages
 from .forms import CommentForm
+from .forms import PostForm
 
 
 class PostList(generic.ListView):
@@ -73,3 +77,32 @@ class PostDetail(View):
                 "comment_form": comment_form,
             },
         )
+
+
+class AddPost(ListView, FormView):
+    """user post view """
+    model = Post
+    form_class = PostForm
+    template_name = 'add_post.html'
+    success_url = '/post_detail.html/'
+
+    def form_valid(self, form):
+        """
+        form for post submission
+        the function checks if the form is valid
+        if it is, it saves the input data
+        and alerts a success message
+        """
+        for post in posts:
+            form.instance.username = self.request.user
+            if form.is_valid:
+                form.save()
+            else:
+                form.clear()
+
+        messages.success(
+            self.request,
+            f'Post submitted successfully'
+        )
+
+        return super(self, AddPost).form_valid(form)
