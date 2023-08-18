@@ -1,4 +1,5 @@
 from .models import Comment
+from .models import Post
 from django import forms
 
 
@@ -10,3 +11,15 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('body',)
+
+
+class PostForm(forms.ModelForm):
+    """
+    This class creates fields
+    for the post section
+    """
+    class Meta:
+        model = Post
+        fields = [
+            'title', 'featured_image', 'item_description',
+        ]
