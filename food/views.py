@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from django.views.generic import ListView
+from django.views.generic import ListView, CreateView
 from django.views.generic.edit import FormView
 from .models import Post
 from django.contrib import messages
@@ -79,12 +79,12 @@ class PostDetail(View):
         )
 
 
-class AddPost(ListView, FormView):
+class AddPost(CreateView):
     """user post view """
     model = Post
     form_class = PostForm
     template_name = 'add_post.html'
-    success_url = '/post_detail.html/'
+    success_url = '/home/'
 
     def form_valid(self, form):
         """
@@ -93,16 +93,10 @@ class AddPost(ListView, FormView):
         if it is, it saves the input data
         and alerts a success message
         """
-        for post in posts:
-            form.instance.username = self.request.user
-            if form.is_valid:
-                form.save()
-            else:
-                form.clear()
-
+        form.instance.author = self.request.user
         messages.success(
             self.request,
             f'Post submitted successfully'
         )
 
-        return super(self, AddPost).form_valid(form)
+        return super(AddPost, self).form_valid(form)
