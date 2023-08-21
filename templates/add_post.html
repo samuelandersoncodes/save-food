@@ -10,7 +10,7 @@
             <div class="col-md-8 offset-md-2">
                 {{ form.non_field_errors }}
                 <p>Posting as: {{ user.username }}</p>
-                <form method="POST" action="{% url 'add_post' %}" class="form-group fieldWrapper" enctype="multipart/form-data">
+                <form method="POST" class="form-group fieldWrapper" enctype="multipart/form-data">
                     {{ field.errors }}
                     {{ form|crispy }}
                     {% csrf_token %}
