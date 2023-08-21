@@ -11,32 +11,30 @@ class Post(models.Model):
     inheriting from the python model
     """
     title = models.CharField(max_length=100, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, null=False, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="food_item_posts")
     updated_on = models.DateTimeField(auto_now=True)
     featured_image = CloudinaryField('image', default='placeholder')
     item_description = models.TextField(blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
+    status = models.IntegerField(choices=STATUS, default=1)
 
+    class Meta:
+        """
+        This class orders posts
+        on the created on field
+        """
+        ordering = ['-created_on']
 
-class Meta:
-    """
-    This class orders posts
-    on the created on field
-    """
-    ordering = ['-created_on']
+    def __str__(self):
+        """
+        returns custom string object representation for posts
+        instead of the default
+        """
+        return self.title
 
-
-def __str__(self):
-    """
-    returns custom string object representation for posts
-    instead of the default
-    """
-    return self.title
-
-
+    
 class Comment(models.Model):
     """
     class for comments
