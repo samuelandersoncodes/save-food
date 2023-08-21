@@ -84,7 +84,7 @@ class AddPost(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'add_post.html'
-    success_url = '/home/'
+    success_url = '/'
 
     def form_valid(self, form):
         """
