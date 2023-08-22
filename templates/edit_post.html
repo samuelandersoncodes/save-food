@@ -1,13 +1,27 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 {% load static %}
 {% block content %}
 
 <div class="container">
     <div class="row">
         <div class="col-md-8 mt-0 offset-md-2">
-            <h2></h2>
-            <div>
-                
+            <h2 class="text-lg-center">Edit Post</h2>
+            <div class="col-md-8 offset-md-2">
+                {{ form.non_field_errors }}
+                <p>Editing as: {{ user.username }}</p>
+                <form method="POST" class="form-group fieldWrapper" enctype="multipart/form-data">
+                    {{ field.errors }}
+                    {{ form|crispy }}
+                    {% csrf_token %}
+                    <button class=" btn btn-secondary hvr-grow right mt-2 mb-3" type="submit">
+                    Update
+                    </button>
+                    <br>
+                    <button class="btn btn-secondary mb-5 hvr-grow" type="submit">
+                        <a class="text-decoration-none text-white" href="{% url 'home' %}">Back</a>
+                    </button>
+                </form>
             </div>
         </div>
     </div>
