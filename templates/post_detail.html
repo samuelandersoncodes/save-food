@@ -25,6 +25,9 @@
             </p>
             <!-- post edit link -->
             <a href="{% url 'edit_post' post.pk %}">edit post</a>
+            <br>
+            <!-- post delete link -->
+            <a href="{% url 'delete_post' post.pk %}">delete post</a>
         </div>
         <div class="col-md-6 p-box p-box-2">
             <div class="row">
