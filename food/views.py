@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.views.generic.edit import FormView
 from .models import Post
+from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from .forms import CommentForm
 from .forms import PostForm
@@ -125,23 +126,20 @@ class EditPost(UpdateView):
         return super(EditPost, self).form_valid(form)
 
 
-class DeletePost(DeleteView):
+class DeletePost(SuccessMessageMixin, DeleteView):
     """user delete post view """
     model = Post
     template_name = 'delete_post.html'
     success_url = '/'
 
-    def form_valid(self, form):
+    def delete(self, request, *args, **kwargs):
         """
-        post removal form
-        the function renders delete option
-        and alerts a success message
-        upon deletion
+        references the post to be deleted
+        and alerts a success message upon deletion
         """
-        form.instance.author = self.request.user
+        post = self.get_object()
         messages.success(
             self.request,
-            f'Post successfully deleted'
+            f'{post.title} successfully deleted'
         )
-
-        return super(DeletePost, self).form_valid(form)
+        return super(DeletePost, self).delete(request, *args, **kwargs)
