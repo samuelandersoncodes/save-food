@@ -7,8 +7,7 @@
         <div class="col-md-8 offset-md-2 mt-5">
             <h2 class="text-lg-center">Delete Post</h2>
             <div class="col-md-8 offset-md-2">
-                {{ form.non_field_errors }}
-                <form method="POST" class="form-group fieldWrapper" enctype="multipart/form-data">
+                <form method="POST">
                     {% csrf_token %}
                     <h3 class="mt-5">
                         {{ post.slug }}
@@ -21,12 +20,12 @@
                             Are you sure you want to delete the item above?
                         </strong>
                     </p>
-                    <button class=" btn btn-secondary hvr-grow right mt-2 mb-3" type="submit">
-                        Delete Post
+                    <button class=" btn btn-danger hvr-grow right mt-2 mb-3" type="submit">
+                        Delete
                     </button>
                     <br>
                     <button class="btn btn-secondary mb-5 hvr-grow" type="submit">
-                        <a class="text-decoration-none text-white" href="{% url 'home' %}">Back</a>
+                        <a class="text-decoration-none text-white" href="{% url 'home' %}">Cancel</a>
                     </button>
                 </form>
             </div>
