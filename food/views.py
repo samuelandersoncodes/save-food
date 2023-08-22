@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.views.generic.edit import FormView
 from .models import Post
 from django.contrib import messages
@@ -123,3 +123,25 @@ class EditPost(UpdateView):
         )
 
         return super(EditPost, self).form_valid(form)
+
+
+class DeletePost(DeleteView):
+    """user delete post view """
+    model = Post
+    template_name = 'delete_post.html'
+    success_url = '/'
+
+    def form_valid(self, form):
+        """
+        post removal form
+        the function renders delete option
+        and alerts a success message
+        upon deletion
+        """
+        form.instance.author = self.request.user
+        messages.success(
+            self.request,
+            f'Post successfully deleted'
+        )
+
+        return super(DeletePost, self).form_valid(form)
