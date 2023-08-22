@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView
 from django.views.generic.edit import FormView
 from .models import Post
 from django.contrib import messages
@@ -100,3 +100,26 @@ class AddPost(CreateView):
         )
 
         return super(AddPost, self).form_valid(form)
+
+
+class EditPost(UpdateView):
+    """user edit post view """
+    model = Post
+    form_class = PostForm
+    template_name = 'add_post.html'
+    success_url = '/'
+
+    def form_valid(self, form):
+        """
+        form for post update
+        the function checks if the form is valid
+        if it is, it saves the updated data
+        and alerts a success message
+        """
+        form.instance.author = self.request.user
+        messages.success(
+            self.request,
+            f'Post successfully updated'
+        )
+
+        return super(EditPost, self).form_valid(form)
