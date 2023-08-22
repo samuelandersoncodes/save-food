@@ -27,7 +27,8 @@
                                 <p class="card-text">{{ post.item_description }}</p>
                             </a>
                             <hr />
-                            <p class="card-text text-muted">{{ post.created_on}}
+                            <p class="card-text text-muted">{{ post.created_on}} 
+                                <a href="{% url 'edit_post' post.pk %}" class="px-5">edit</a>
                             </p>
                         </div>
                     </div>
