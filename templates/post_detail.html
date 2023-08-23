@@ -2,7 +2,16 @@
 {% load crispy_forms_tags %}
 {% load static %}
 {% block content %}
-
+<div class="row">
+    <div class="col">
+        <!-- button for user posts-->
+        <div class="post-button text-center mb-0">
+            <button type="submit" class="btn btn-secondary mt-1 hvr-grow">
+                <a class="text-decoration-none text-white" href="{% url 'add_post' %}">Share food</a>
+            </button>
+        </div>
+    </div>
+</div>
 <div class="container post-box">
     <div class="row">
         <div class="col-md-6 text-center mb-5 p-box-1">
