@@ -157,3 +157,14 @@ main {
     }
 
 }
+
+@media only screen and (max-width: 570px) {
+
+    .post-box {
+        margin: 0.1rem auto;
+        margin-bottom: 0;
+        padding: 0.5rem 0.5rem;
+        font-size: 100%;
+    }
+
+}
