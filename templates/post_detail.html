@@ -25,11 +25,13 @@
             </p>
             <!-- post pick up address -->
             <p><strong>Pick up at:</strong> {{ post.address }}</p>
+            {% if user.is_authenticated %}
             <!-- post edit link -->
             <a href="{% url 'edit_post' post.pk %}">edit post</a>
             <br>
             <!-- post delete link -->
             <a class="mb-4" href="{% url 'delete_post' post.pk %}">delete post</a>
+            {% endif %}
         </div>
         <div class="col-md-6 p-box-2">
             <div class="row">
