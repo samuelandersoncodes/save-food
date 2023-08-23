@@ -3,6 +3,14 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
+        <div class="col">
+            <!-- button for user posts-->
+            <div class="post-button text-center mb-3">
+                <button type="submit" class="btn btn-secondary mt-1 hvr-grow">
+                    <a class="text-decoration-none text-white" href="{% url 'add_post' %}">Share food</a>
+                </button>
+            </div>
+        </div>
         <!-- food item post column -->
         <div class="col-12 mt-0 left">
             <div class="row">
