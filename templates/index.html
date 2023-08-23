@@ -28,10 +28,12 @@
                             </a>
                             <p class="card-text"><strong>Pick up at:</strong> {{ post.address }}</p>
                             <hr />
+                            {% if user.is_authenticated %}
                             <p class="card-text text-muted">{{ post.created_on}}
                                 <a href="{% url 'edit_post' post.pk %}" class="px-5">edit</a>
                                 <a href="{% url 'delete_post' post.pk %}">delete</a>
                             </p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
