@@ -88,7 +88,7 @@ footer {
 .post-box {
     height: auto;
     margin: 1rem auto;
-    padding: 0.8rem 0.5rem;
+    padding: 0.8rem 0.8rem;
     background-color: #e8e9eb43;
     border-radius: 2px;
     color: #36454f;
@@ -97,7 +97,7 @@ footer {
 }
 
 .p-box-2 {
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 1.8rem;
 }
 
 /* posted date and time of post details */
