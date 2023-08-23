@@ -23,6 +23,8 @@
             <p>
                 {{ post.item_description }}
             </p>
+            <!-- post pick up address -->
+            <p><strong>Pick up at:</strong> {{ post.address }}</p>
             <!-- post edit link -->
             <a href="{% url 'edit_post' post.pk %}">edit post</a>
             <br>
