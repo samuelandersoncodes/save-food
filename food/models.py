@@ -19,6 +19,7 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     featured_image = CloudinaryField('image', default='placeholder')
     item_description = models.TextField(blank=False)
+    address = models.CharField(max_length=60, blank=False, default='')
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=1)
 
