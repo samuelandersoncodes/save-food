@@ -12,8 +12,8 @@
             </h3>
             <p>
                 <a href="{% url 'account_signup' %}" class="text-decoration-none">signup</a>
-                 or <a href="{% url 'account_login' %}" class="text-decoration-none">login</a> 
-                 to share and reserve food
+                or <a href="{% url 'account_login' %}" class="text-decoration-none">login</a>
+                to share and reserve food
             </p>
         </div>
     </div>
@@ -24,7 +24,7 @@
             <!-- button for user posts-->
             {% if user.is_authenticated %}
             <div class="post-button text-center mb-3">
-                <button type="submit" class="btn btn-secondary mt-1 hvr-grow">
+                <button type="submit" class="btn btn-secondary hvr-grow">
                     <a class="text-decoration-none text-white" href="{% url 'add_post' %}">Share food</a>
                 </button>
             </div>

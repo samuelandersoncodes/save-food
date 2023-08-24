@@ -17,10 +17,22 @@ body {
 .logo {
     font-family: 'Russo One', sans-serif;
     font-size: 200%;
+    padding-bottom: 0;
 }
 
 .logo>i {
     padding-right: 2px;
+    margin-bottom: 0;
+}
+
+/*motto styling*/
+.motto {
+    display: block;
+    font-family: 'Kadwa', serif;
+    font-size: 90%;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
 }
 
 /* navigation styling */
@@ -38,6 +50,7 @@ body {
         rgb(0 0 0 / 3%) 0px 8px 4px,
         rgb(0 0 0 / 3%) 0px 16px 8px,
         rgb(0 0 0 / 3%) 0px 32px 16px;
+    height: 82px;
     z-index: 1;
 }
 
