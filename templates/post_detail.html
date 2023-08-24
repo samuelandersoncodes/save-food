@@ -5,11 +5,13 @@
 <div class="row">
     <div class="col">
         <!-- button for user posts-->
+        {% if user.is_authenticated %}
         <div class="post-button text-center mb-0">
             <button type="submit" class="btn btn-secondary mt-1 hvr-grow">
                 <a class="text-decoration-none text-white" href="{% url 'add_post' %}">Share food</a>
             </button>
         </div>
+        {% endif %}
     </div>
 </div>
 <div class="container post-box">
