@@ -9,7 +9,7 @@
   <div class="row">
     <div class="col-md-8 offset-md-2 mt-5 text-center">
       <h2 class="fs-1 mb-5">{% trans "Sign out of Save Food" %}</h2>
-      <p class="fs-4">{% trans 'Are you sure you want to sign out?' %}</p>
+      <p class="fs-4 text-danger">{% trans 'Are you sure you want to sign out?' %}</p>
     </div>
   </div>
   <div class="row">
@@ -17,9 +17,9 @@
       <form method="post" action="{% url 'account_logout' %}">
         {% csrf_token %}
         {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
         {% endif %}
-        <button class="btn bg-secondary hvr-grow btn-signup mt-4" type="submit">{% trans 'Sign Out' %}</button>
+        <button class="btn btn-danger hvr-grow mt-4" type="submit">{% trans 'Sign Out' %}</button>
       </form>
     </div>
   </div>
