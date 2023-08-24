@@ -1,6 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center mt-1">
+            <h3>
+                <strong>
+                    Instead of wasting food, Share it here
+                </strong>
+            </h3>
+            <p>
+                <a href="{% url 'account_signup' %}" class="text-decoration-none">signup</a>
+                 or <a href="{% url 'account_login' %}" class="text-decoration-none">login</a> 
+                 to share and reserve food
+            </p>
+        </div>
+    </div>
+</div>
 <div class="container-fluid">
     <div class="row">
         <div class="col">
