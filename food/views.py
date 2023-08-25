@@ -1,7 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.views.generic.edit import FormView
+from django.http import HttpResponseRedirect
 from .models import Post
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
@@ -34,6 +35,10 @@ class PostDetail(View):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_on')
+        reserved = True
+        while post.reserve.filter(id=request.user.id).exists():
+            reserved = False
+            break
 
         return render(
             request,
@@ -41,6 +46,7 @@ class PostDetail(View):
             {
                 "post": post,
                 "comments": comments,
+                "reserved": reserved,
                 "commented": False,
                 "comment_form": CommentForm()
             },
@@ -74,6 +80,7 @@ class PostDetail(View):
             {
                 "post": post,
                 "comments": comments,
+                "reserved": reserved,
                 "commented": True,
                 "comment_form": comment_form,
             },
@@ -143,3 +150,22 @@ class DeletePost(SuccessMessageMixin, DeleteView):
             f'{post.title} successfully deleted'
         )
         return super(DeletePost, self).delete(request, *args, **kwargs)
+
+
+class Reserve_Food_Item(View):
+    """food item reservation view"""
+
+    def post(self, request, slug):
+        """
+        this function checks if a post item is reserved
+        if it is, the reserved status is removed
+        if not, then reserved it added
+        and returns back to postdetail page
+        """
+        post = get_object_or_404(Post, slug=slug)
+        if post.reserve.filter(id=request.user.id).exists():
+            post.reserve.remove(request.user)
+        else:
+            post.reserve.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
