@@ -38,6 +38,7 @@
             <p><strong>Pick up at:</strong> {{ post.address }}</p>
             <!-- food item reservation -->
             {% if user.is_authenticated %}
+            {% if user.id == post.author.id %}
             {{ form.non_field_errors }}
             <form class="text-center mb-4" action="{% url 'post_reserved' post.slug %}" method="POST">
                 {% csrf_token %}
@@ -51,6 +52,7 @@
             </form>
             {% else %}
             <span class="text-muted fs-6 fst-italic"><small>signup/in to reserve item</small></span>
+            {% endif %}
             {% endif %}
             {% if user.is_authenticated %}
             {% if user.id == post.author.id %}
