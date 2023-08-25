@@ -59,10 +59,12 @@
                             <hr />
                             <p class="card-text text-muted"> {{ post.created_on}} </p>
                             {% if user.is_authenticated %}
+                            {% if user.id == post.author.id %}
                             <p>
                                 <a href="{% url 'edit_post' post.pk %}" class="px-5">edit</a>
                                 <a href="{% url 'delete_post' post.pk %}">delete</a>
                             </p>
+                            {% endif %}
                             {% endif %}
                         </div>
                     </div>
