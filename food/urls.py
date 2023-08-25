@@ -11,4 +11,6 @@ urlpatterns = [
          DeletePost.as_view(), name='delete_post'),
     path('post_detail/<slug:slug>/',
          views.PostDetail.as_view(), name='post_detail'),
+    path('post_reserved/<slug:slug>/reserve',
+         views.Reserve_Food_Item.as_view(), name='post_reserved'),
 ]
