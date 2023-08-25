@@ -36,28 +36,30 @@
             </p>
             <!-- post pick up address -->
             <p><strong>Pick up at:</strong> {{ post.address }}</p>
-             <!-- food item reservation -->
-             {% if user.is_authenticated %}
-             {{ form.non_field_errors }}
-             <form class="text-center mb-4" action="{% url 'post_reserved' post.slug %}" method="POST">
-                 {% csrf_token %}
-                 {% if reserved %}
-                 <button type="submit" name="food_item_posts_id" value="{{post.slug}}"
-                     class="btn btn-outline-success">reserve</button>
-                 {% else %}
-                 <button type="submit" name="food_item_posts_id" value="{{post.slug}}"
-                     class="btn btn-success mt-1">reserved</button>
-                 {% endif %}
-             </form>
-             {% else %}
-             <span class="text-muted fs-6 fst-italic"><small>signup/in to reserve item</small></span>
-             {% endif %}
+            <!-- food item reservation -->
             {% if user.is_authenticated %}
+            {{ form.non_field_errors }}
+            <form class="text-center mb-4" action="{% url 'post_reserved' post.slug %}" method="POST">
+                {% csrf_token %}
+                {% if reserved %}
+                <button type="submit" name="food_item_posts_id" value="{{post.slug}}"
+                    class="btn btn-outline-success">reserve</button>
+                {% else %}
+                <button type="submit" name="food_item_posts_id" value="{{post.slug}}"
+                    class="btn btn-success mt-1">reserved</button>
+                {% endif %}
+            </form>
+            {% else %}
+            <span class="text-muted fs-6 fst-italic"><small>signup/in to reserve item</small></span>
+            {% endif %}
+            {% if user.is_authenticated %}
+            {% if user.id == post.author.id %}
             <!-- post edit link -->
             <a href="{% url 'edit_post' post.pk %}">edit post</a>
             <br>
             <!-- post delete link -->
             <a class="mb-4" href="{% url 'delete_post' post.pk %}">delete post</a>
+            {% endif %}
             {% endif %}
         </div>
         <div class="col-md-6 p-box-2">
