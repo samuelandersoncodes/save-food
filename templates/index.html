@@ -57,10 +57,10 @@
                             </a>
                             <p class="card-text"><strong>Pick up at:</strong> {{ post.address }}</p>
                             <hr />
-                            <p class="card-text text-muted"> {{ post.created_on}} </p>
+                            <p class="card-text text-muted d-inline-block"> {{ post.created_on}} </p>
                             {% if user.is_authenticated %}
                             {% if user.id == post.author.id %}
-                            <p>
+                            <p class="d-inline-block">
                                 <a href="{% url 'edit_post' post.pk %}" class="px-5">edit</a>
                                 <a href="{% url 'delete_post' post.pk %}">delete</a>
                             </p>
