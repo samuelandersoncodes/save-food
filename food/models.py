@@ -12,14 +12,14 @@ class Post(models.Model):
     class for posts
     inheriting from the python model
     """
-    title = models.CharField(max_length=100, unique=True)
-    slug = models.SlugField(max_length=200, null=False, unique=True)
+    title = models.CharField(max_length=35, unique=True)
+    slug = models.SlugField(max_length=50, null=False, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="food_item_posts")
     updated_on = models.DateTimeField(auto_now=True)
     featured_image = CloudinaryField('image', default='placeholder')
-    item_description = models.TextField(blank=False)
-    address = models.CharField(max_length=60, blank=False, default='')
+    item_description = models.TextField(max_length=45, blank=False)
+    address = models.CharField(max_length=35, blank=False, default='')
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=1)
     reserve = models.ManyToManyField(
