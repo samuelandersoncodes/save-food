@@ -22,7 +22,8 @@ class Post(models.Model):
     address = models.CharField(max_length=60, blank=False, default='')
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=1)
-    reserved = models.BooleanField(blank=True, null=True, default=False)
+    reserve = models.ManyToManyField(
+        User, blank=True, default='reserve', related_name='food_item_reserve')
 
     class Meta:
         """
