@@ -10,11 +10,13 @@
                     Instead of wasting food, Share it here
                 </strong>
             </h3>
+            {% if not user.is_authenticated %}
             <p>
                 <a href="{% url 'account_signup' %}" class="text-decoration-none">signup</a>
                 or <a href="{% url 'account_login' %}" class="text-decoration-none">login</a>
                 to share and reserve food
             </p>
+            {% endif %}
         </div>
     </div>
 </div>
