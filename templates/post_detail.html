@@ -2,19 +2,21 @@
 {% load crispy_forms_tags %}
 {% load static %}
 {% block content %}
-<div class="row">
-    <div class="col">
-        <!-- button for user posts-->
-        {% if user.is_authenticated %}
-        <div class="post-button text-center mb-0">
-            <button type="submit" class="btn btn-secondary mt-1 hvr-grow">
-                <a class="text-decoration-none text-white" href="{% url 'add_post' %}">Share food</a>
-            </button>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <!-- button for user posts-->
+            {% if user.is_authenticated %}
+            <div class="post-button text-center mb-0">
+                <button type="submit" class="btn btn-secondary mt-1 hvr-grow">
+                    <a class="text-decoration-none text-white" href="{% url 'add_post' %}">Share food</a>
+                </button>
+            </div>
+            {% endif %}
         </div>
-        {% endif %}
     </div>
 </div>
-<div class="container post-box">
+<div class="container mt-3 post-box">
     <div class="row">
         <div class="col-md-6 text-center mb-5 p-box-1">
             <!-- title of the post -->
@@ -64,9 +66,9 @@
             {% endif %}
             {% endif %}
         </div>
-        <div class="col-md-6 p-box-2">
+        <div class="col-md-5">
             <div class="row">
-                <div class="col-md-6 card mb-0  mt-3">
+                <div class="col-md-5 card mb-0 mt-3 p-box-2">
                     <!-- heading for comments -->
                     <h3 class="mb-0">Comments:</h3>
                     <div class="card-body">
@@ -85,7 +87,7 @@
                             {{ comment.body | linebreaks }}
                         </div>
                         {% endfor %}
-                        <div class="col-md-4 card">
+                        <div class="card">
                             <div class="card-body">
                                 {% if commented %}
                                 <div class="alert alert-success" role="alert">
@@ -109,7 +111,6 @@
             </div>
         </div>
     </div>
-</div>
 </div>
 
 {% endblock content %}
