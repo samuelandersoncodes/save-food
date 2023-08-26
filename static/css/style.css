@@ -165,7 +165,7 @@ main {
 /* media queries for big screens */
 @media only screen and (max-width: 1060px) {
 
-    img {
+    .img-home {
         width: 20rem;
         height: 29vh;
     }
@@ -175,7 +175,7 @@ main {
 /* media queries for small screens */
 @media only screen and (max-width: 768px) {
 
-    img {
+    .img-home {
         width: 40%;
         height: 40%;
     }
