@@ -80,7 +80,6 @@ class PostDetail(View):
             {
                 "post": post,
                 "comments": comments,
-                "reserved": reserved,
                 "commented": True,
                 "comment_form": comment_form,
             },
