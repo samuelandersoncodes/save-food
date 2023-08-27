@@ -66,6 +66,18 @@
                             </p>
                             {% endif %}
                             {% endif %}
+                            <div>
+                                {% if user.is_authenticated %}
+                                <form class="text-center mb-4" action="{% url 'post_reserved' post.slug %}"
+                                    method="POST">
+                                    {% csrf_token %}
+                                    {% if not reserved %}
+                                    <button type="submit" name="food_item_posts_id" value="{{post.slug}}"
+                                        class="btn btn-outline-success">reserve</button>
+                                    {% endif %}
+                                {% endif %}
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
