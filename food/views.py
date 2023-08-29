@@ -156,15 +156,19 @@ class Reserve_Food_Item(View):
 
     def post(self, request, slug):
         """
-        this function checks if a post item is reserved
+        this function first checks if the user is the
+        author of the respective post
+        then, checks if a post item is reserved
         if it is, the reserved status is removed
         if not, then reserved it added
         and returns back to postdetail page
         """
         post = get_object_or_404(Post, slug=slug)
-        if post.reserve.filter(id=request.user.id).exists():
-            post.reserve.remove(request.user)
-        else:
-            post.reserve.add(request.user)
+        if request.user.id == post.author.id:
+            if post.reserve.filter(id=request.user.id).exists():
+                post.reserve.remove(request.user)
+            else:
+                post.reserve.add(request.user)
+                post.save()
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
