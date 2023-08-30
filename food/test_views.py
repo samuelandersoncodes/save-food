@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Post
+from .models import Post, Comment
 from django.contrib.auth.models import User
 from django.urls import reverse
 
@@ -33,6 +33,33 @@ class TestViews(TestCase):
         response = self.client.get('/post_detail/{post.slug}/')
         url = reverse('post_detail', kwargs={'slug': post.slug})
         self.response = self.client.get(url)
+        self.assertEqual(self.response.status_code, 200)
+
+    def test_posted_detail(self):
+        """
+        this function creates a user, post and comment instance
+        gets the post detail page url
+        and comfrims that its response status is good
+        """
+        newuser = User.objects.create(username='test', password='test')
+        post = Post.objects.create(
+            title='Banana',
+            slug='banana',
+            author=newuser,
+            item_description='sweet banana',
+            status=1,
+            address='Berlin, 122345'
+        )
+        comment = Comment.objects.create(
+            name=newuser,
+            email='test@gmail.com',
+            body='I love to have it for dinner',
+            post=post,
+            approved=True
+        )
+        response = self.client.post('/post_detail/{post.slug}/')
+        url = reverse('post_detail', kwargs={'slug': post.slug})
+        self.response = self.client.post(url)
         self.assertEqual(self.response.status_code, 200)
 
     def test_add_post(self):
