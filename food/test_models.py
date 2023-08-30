@@ -97,3 +97,26 @@ class TestModels(TestCase):
             approved=True
         )
         self.assertEqual(str(comment.body), 'I love to have it for dinner')
+
+    def test_comments_ordered_per_created_date_time(self):
+        """
+        this function creates a user and comment instance
+        and tests if comments are ordered per their created date and time
+        """
+        newuser = User.objects.create(username='test', password='test')
+        post = Post.objects.create(
+            title='Banana',
+            slug='banana',
+            author=newuser,
+            item_description='sweet banana',
+            status=1,
+            address='Berlin, 122345'
+        )
+        comment = Comment.objects.create(
+            name=newuser,
+            email='test@gmail.com',
+            body='I love to have it for dinner',
+            post=post
+        )
+        ordering = ['created_on']
+        self.assertTrue((comment), ordering)
