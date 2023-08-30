@@ -110,7 +110,7 @@ class AddPost(CreateView):
         return super(AddPost, self).form_valid(form)
 
 
-class EditPost(UserPassesTestMixin, UpdateView):
+class EditPost(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
     """user edit post view """
     model = Post
     form_class = PostForm
@@ -125,9 +125,10 @@ class EditPost(UserPassesTestMixin, UpdateView):
         and alerts a success message
         """
         form.instance.author = self.request.user
+        post = self.get_object()
         messages.success(
             self.request,
-            f'Post successfully updated'
+            f'{post.title} successfully updated'
         )
 
         return super(EditPost, self).form_valid(form)
