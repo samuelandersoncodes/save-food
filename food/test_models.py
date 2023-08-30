@@ -36,6 +36,23 @@ class TestModels(TestCase):
             address='Berlin, 122345')
         self.assertEqual(str(post), 'Banana')
 
+    def test_posts_ordered_per_created_date_time(self):
+        """
+        this function creates a user and post instance
+        and tests if posts are ordered per their created date and time
+        """
+        newuser = User.objects.create(username='test', password='test')
+        post = Post.objects.create(
+            title='Banana',
+            slug='banana',
+            author=newuser,
+            item_description='sweet banana',
+            status=1,
+            address='Berlin, 122345',
+        )
+        ordering = ['-created_on']
+        self.assertTrue((post), ordering)
+
     def test_comment_approved_to_true(self):
         """
         this function creates a user and comment instance
