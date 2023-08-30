@@ -101,6 +101,25 @@ class TestViews(TestCase):
         self.response = self.client.get(url)
         self.assertEqual(self.response.status_code, 200)
 
+    def test_can_edit_post_repost(self):
+        """
+        this function creates a user and post instance
+        tests the editpost post method
+        and comfrims that its response status is good
+        """
+        newuser = User.objects.create(username='test', password='test')
+        post = Post.objects.create(
+            title='Banana',
+            slug='banana',
+            author=newuser,
+            item_description='sweet banana',
+            status=1,
+            address='Berlin, 122345')
+        response = self.client.post('/editpost/{post.pk}/')
+        url = reverse('edit_post', kwargs={'pk': post.pk})
+        self.response = self.client.post(url)
+        self.assertEqual(self.response.status_code, 200)
+
     def test_delete_post(self):
         """
         this function creates a user and post instance
