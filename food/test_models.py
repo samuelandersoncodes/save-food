@@ -21,6 +21,21 @@ class TestModels(TestCase):
         unique = post.slug == post.id
         self.assertTrue(post.slug, unique)
 
+    def test_string_method_returns_title(self):
+        """
+        this function creates a user and post instance
+        and tests if string method returns title value
+        """
+        newuser = User.objects.create(username='test', password='test')
+        post = Post.objects.create(
+            title='Banana',
+            slug='banana',
+            author=newuser,
+            item_description='sweet banana',
+            status=1,
+            address='Berlin, 122345')
+        self.assertEqual(str(post), 'Banana')
+
     def test_comment_approved_to_true(self):
         """
         this function creates a user and comment instance
