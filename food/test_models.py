@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Post
+from .models import Post, Comment
 from django.contrib.auth.models import User
 
 
@@ -20,3 +20,25 @@ class TestModels(TestCase):
             address='Berlin, 122345')
         unique = post.slug == post.id
         self.assertTrue(post.slug, unique)
+
+    def test_comment_approved_to_true(self):
+        """
+        this function creates a user and comment instance
+        and tests if its approval defaults to true
+        """
+        newuser = User.objects.create(username='test', password='test')
+        post = Post.objects.create(
+            title='Banana',
+            slug='banana',
+            author=newuser,
+            item_description='sweet banana',
+            status=1,
+            address='Berlin, 122345')
+        comment = Comment.objects.create(
+            name=newuser,
+            email='test@gmail.com',
+            body='I love to have it for dinner',
+            post=post,
+            approved=True
+        )
+        self.assertTrue(comment.approved)
