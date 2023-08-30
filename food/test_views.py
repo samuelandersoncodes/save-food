@@ -72,6 +72,16 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'add_post.html')
 
+    def test_can_add_post(self):
+        """
+        this function test the addpost post method
+        comfrims that its response status is good
+        and also confirm the accurate template used
+        """
+        response = self.client.post('/addpost/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'add_post.html')
+
     def test_edit_post(self):
         """
         this function creates a user and post instance
