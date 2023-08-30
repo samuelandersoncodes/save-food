@@ -57,3 +57,26 @@ class TestModels(TestCase):
             approved=True
         )
         self.assertTrue(comment.approved)
+
+    def test_string_method_returns_body_message(self):
+        """
+        this function creates a user and comment instance
+        and tests if the body message of comment returns
+        its string value
+        """
+        newuser = User.objects.create(username='test', password='test')
+        post = Post.objects.create(
+            title='Banana',
+            slug='banana',
+            author=newuser,
+            item_description='sweet banana',
+            status=1,
+            address='Berlin, 122345')
+        comment = Comment.objects.create(
+            name=newuser,
+            email='test@gmail.com',
+            body='I love to have it for dinner',
+            post=post,
+            approved=True
+        )
+        self.assertEqual(str(comment.body), 'I love to have it for dinner')
