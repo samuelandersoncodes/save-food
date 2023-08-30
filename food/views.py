@@ -4,6 +4,7 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.views.generic.edit import FormView
 from django.http import HttpResponseRedirect
 from .models import Post
+from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from .forms import CommentForm
@@ -109,7 +110,7 @@ class AddPost(CreateView):
         return super(AddPost, self).form_valid(form)
 
 
-class EditPost(UpdateView):
+class EditPost(UserPassesTestMixin, UpdateView):
     """user edit post view """
     model = Post
     form_class = PostForm
@@ -130,6 +131,17 @@ class EditPost(UpdateView):
         )
 
         return super(EditPost, self).form_valid(form)
+
+    def test_func(self):
+        """
+        ensures user is author of the post in question
+        if not user cannot edit the post
+        and a 403 error is thrown
+        """
+        if self.request.user.is_staff:
+            return True
+        else:
+            return self.request.user == self.get_object().author
 
 
 class DeletePost(SuccessMessageMixin, DeleteView):
