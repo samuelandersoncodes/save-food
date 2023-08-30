@@ -34,3 +34,13 @@ class TestViews(TestCase):
         url = reverse('post_detail', kwargs={'slug': post.slug})
         self.response = self.client.get(url)
         self.assertEqual(self.response.status_code, 200)
+
+    def test_add_post(self):
+        """
+        this function gets the addpost page url
+        comfrims that its response status is good
+        and also confirm the accurate template used
+        """
+        response = self.client.get('/addpost/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'add_post.html')
