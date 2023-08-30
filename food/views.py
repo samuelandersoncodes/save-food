@@ -145,7 +145,7 @@ class EditPost(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
             return self.request.user == self.get_object().author
 
 
-class DeletePost(SuccessMessageMixin, DeleteView):
+class DeletePost(SuccessMessageMixin, UserPassesTestMixin, DeleteView):
     """user delete post view """
     model = Post
     template_name = 'delete_post.html'
@@ -162,6 +162,17 @@ class DeletePost(SuccessMessageMixin, DeleteView):
             f'{post.title} successfully deleted'
         )
         return super(DeletePost, self).delete(request, *args, **kwargs)
+
+    def test_func(self):
+        """
+        ensures user is author of the post in question
+        if not user cannot delete the post
+        and a 403 error is thrown
+        """
+        if self.request.user.is_staff:
+            return True
+        else:
+            return self.request.user == self.get_object().author
 
 
 class Reserve_Food_Item(View):
