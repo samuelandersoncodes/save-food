@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.views.generic import TemplateView
 from django.views.generic.edit import FormView
 from django.http import HttpResponseRedirect
 from .models import Post
@@ -196,3 +197,8 @@ class Reserve_Food_Item(View):
                 post.save()
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class AboutView(TemplateView):
+    """about view"""
+    template_name = "about.html"
