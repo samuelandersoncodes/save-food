@@ -255,3 +255,19 @@ main {
     }
 
 }
+
+@media only screen and (max-width: 317px) {
+
+    main {
+        
+        margin-top: 46px;
+
+    }
+
+    .navbar-toggler {
+        
+        margin-top: 6px;
+
+    }
+
+}
