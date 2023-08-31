@@ -58,24 +58,30 @@
                             <p class="card-text"><strong>Pick up at:</strong> {{ post.address }}</p>
                             <hr />
                             <p class="card-text text-muted d-inline-block"> {{ post.created_on}} </p>
-                            {% if user.is_authenticated %}
-                            {% if user.id == post.author.id %}
-                            <p class="card-text d-inline-block">
-                                <a href="{% url 'edit_post' post.pk %}" class="px-3">edit</a>
-                                <a href="{% url 'delete_post' post.pk %}">delete</a>
-                            </p>
-                            {% endif %}
-                            {% endif %}
                             <div>
                                 {% if user.is_authenticated %}
-                                <form class="text-center mb-4" action="{% url 'post_reserved' post.slug %}"
+                                {% if user.id == post.author.id %}
+                                <p class="card-text d-inline-block">
+                                    <a href="{% url 'edit_post' post.pk %}" class="px-3">edit</a>
+                                    <a href="{% url 'delete_post' post.pk %}">delete</a>
+                                </p>
+                                {% endif %}
+                                {% if not user.id == post.author.id %}
+                                <a href="{% url 'edit_post' post.pk %}" class="px-3 text-white">edit</a>
+                                <a href="{% url 'delete_post' post.pk %}" class="text-white">delete</a>
+                                {% endif %}
+                                {% endif %}
+                            </div>
+                            <div>
+                                {% if user.is_authenticated %}
+                                <form class="text-center mb-1 mt-3" action="{% url 'post_reserved' post.slug %}"
                                     method="POST">
                                     {% csrf_token %}
                                     {% if not reserved %}
                                     <button type="submit" name="food_item_posts_id" value="{{post.slug}}"
                                         class="btn btn-outline-success">reserve</button>
                                     {% endif %}
-                                {% endif %}
+                                    {% endif %}
                                 </form>
                             </div>
                         </div>
