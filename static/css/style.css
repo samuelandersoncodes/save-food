@@ -190,11 +190,27 @@ main {
 /* food item card styling  */
 .item-card {
     height: auto;
-    min-height: 36rem;
+    min-height: 39rem;
 }
 
 /* media queries */
 /* media queries for big screens */
+@media only screen and (max-width: 1214px) {
+
+    .item-card {
+        min-height: 42rem;
+    }
+
+}
+
+@media only screen and (max-width: 1071px) {
+
+    .item-card {
+        min-height: 44rem;
+    }
+
+}
+
 @media only screen and (max-width: 1060px) {
 
     .img-home {
