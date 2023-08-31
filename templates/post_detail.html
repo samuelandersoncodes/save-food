@@ -70,7 +70,7 @@
             <div class="row">
                 <div class="col-md-5 card mb-0 mt-3 p-box-2">
                     <!-- heading for comments -->
-                    <h3 class="mb-0">Comments:</h3>
+                    <h3 class="mb-0">Chat box:</h3>
                     <div class="card-body">
                         <!-- this for loop below iterates through each comment in comments -->
                         {% for comment in comments %}
@@ -95,7 +95,17 @@
                                 </div>
                                 {% else %}
                                 {% if user.is_authenticated %}
-                                <h3>Write a comment:</h3>
+                                {% if not user.id == post.author.id %}
+                                <div class="confirm-text">
+                                    <h3 class="text-danger">Confirm reservation via chat:</h3>
+                                </div>
+                                <br>
+                                {% else %}
+                                {% if user.id == post.author.id %}
+                                <div class="confirm-text"></div>
+                                <h4>Reserve food for serious people based on chat</h4>
+                                {% endif %}
+                                {% endif %}
                                 <p>Writing as: {{ user.username }}</p>
                                 <form method="post">
                                     {{ comment_form | crispy }}
