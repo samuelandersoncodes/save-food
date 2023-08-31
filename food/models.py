@@ -17,7 +17,7 @@ class Post(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="food_item_posts")
     updated_on = models.DateTimeField(auto_now=True)
-    featured_image = CloudinaryField('image', default='placeholder')
+    featured_image = CloudinaryField('image', blank=False)
     item_description = models.TextField(max_length=45, blank=False)
     address = models.CharField(max_length=35, blank=False, default='')
     created_on = models.DateTimeField(auto_now_add=True)
