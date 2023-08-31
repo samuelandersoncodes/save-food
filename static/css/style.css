@@ -35,6 +35,12 @@ body {
     padding: 0;
 }
 
+/* home page post card styling */
+#item-card {
+    height: auto;
+    min-height: 42rem;
+}
+
 /* navigation styling */
 .nav-link {
     padding-left: 1.3rem;
@@ -187,12 +193,6 @@ main {
     min-height: 75vh;
 }
 
-/* food item card styling  */
-.item-card {
-    height: auto;
-    min-height: 41rem;
-}
-
 /* media queries (in descending order)*/
 /* media queries for big screens */
 @media only screen and (max-width: 1272px) {
@@ -201,12 +201,8 @@ main {
         height: 16rem;
     }
 
-}
-
-@media only screen and (max-width: 1214px) {
-
-    .item-card {
-        min-height: 42rem;
+    #item-card {
+        min-height: 38rem;
     }
 
 }
@@ -219,10 +215,10 @@ main {
 
 }
 
-@media only screen and (max-width: 1071px) {
+@media only screen and (max-width: 1016px) {
 
-    .item-card {
-        min-height: 44.5rem;
+    #item-card {
+        min-height: 40rem;
     }
 
 }
@@ -233,13 +229,17 @@ main {
         height: 12rem;
     }
 
+    #item-card {
+        min-height: 38rem;
+    }
+
 }
 
 /* media queries for small screens */
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 860px) {
 
-    .item-card {
-        min-height: 45.7rem;
+    #item-card {
+        min-height: 39rem;
     }
 
 }
@@ -253,10 +253,6 @@ main {
 }
 
 @media only screen and (max-width: 767px) {
-
-    .item-card {
-        min-height: 38rem;
-    }
 
     #img-home {
         width: 100%;
