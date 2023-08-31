@@ -1,7 +1,7 @@
 from . import views
 from django.urls import path
-from .views import PostDetail, AddPost, EditPost, DeletePost
-
+from .views import PostDetail, AddPost, EditPost, DeletePost, AboutView
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
@@ -13,4 +13,5 @@ urlpatterns = [
          views.PostDetail.as_view(), name='post_detail'),
     path('post_reserved/<slug:slug>/reserve',
          views.Reserve_Food_Item.as_view(), name='post_reserved'),
+    path('about/', views.AboutView.as_view(), name='about'),
 ]
