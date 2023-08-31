@@ -190,7 +190,7 @@ main {
 /* food item card styling  */
 .item-card {
     height: auto;
-    min-height: 39rem;
+    min-height: 41rem;
 }
 
 /* media queries */
@@ -206,7 +206,7 @@ main {
 @media only screen and (max-width: 1071px) {
 
     .item-card {
-        min-height: 44rem;
+        min-height: 44.5rem;
     }
 
 }
@@ -221,6 +221,22 @@ main {
 }
 
 /* media queries for small screens */
+@media only screen and (max-width: 870px) {
+
+    .item-card {
+        min-height: 45.7rem;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .item-card {
+        min-height: 38rem;
+    }
+
+}
+
 @media only screen and (max-width: 768px) {
 
     .img-home {
