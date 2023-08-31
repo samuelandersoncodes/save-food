@@ -39,23 +39,23 @@
             <!-- post pick up address -->
             <p><strong>Pick up at:</strong> {{ post.address }}</p>
             <!-- food item reservation -->
-            {% if user.is_authenticated %}
-            {% if user.id == post.author.id %}
-            {{ form.non_field_errors }}
-            <form class="text-center mb-4" action="{% url 'post_reserved' post.slug %}" method="POST">
-                {% csrf_token %}
-                {% if reserved %}
-                <button type="submit" name="food_item_posts_id" value="{{post.slug}}"
-                    class="btn btn-outline-success">reserve</button>
-                {% else %}
-                <button type="submit" name="food_item_posts_id" value="{{post.slug}}"
-                    class="btn btn-success mt-1">reserved</button>
+            <div>
+                {% if user.is_authenticated %}
+                {% if user.id == post.author.id %}
+                {{ form.non_field_errors }}
+                <form class="text-center mb-4" action="{% url 'post_reserved' post.slug %}" method="POST">
+                    {% csrf_token %}
+                    {% if reserved %}
+                    <button type="submit" name="food_item_posts_id" value="{{post.slug}}"
+                        class="btn btn-outline-success">reserve</button>
+                    {% else %}
+                    <button type="submit" name="food_item_posts_id" value="{{post.slug}}"
+                        class="btn btn-success mt-1">reserved</button>
+                    {% endif %}
+                </form>
                 {% endif %}
-            </form>
-            {% else %}
-            <span class="text-muted fs-5 fst-italic"><small>chat item owner for reservation</small></span>
-            {% endif %}
-            {% endif %}
+                {% endif %}
+            </div>
             {% if user.is_authenticated %}
             {% if user.id == post.author.id %}
             <!-- post edit link -->
