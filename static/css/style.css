@@ -123,6 +123,38 @@ footer {
     height: auto;
 }
 
+/* chat box confirmation text styling */
+.confirm-text {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 3px;
+    background-color: #e8e9ebd6;
+    animation-duration: 5s;
+    animation-name: confirm-text;
+    animation-fill-mode: forwards;
+}
+
+/* confirm text animation */
+@keyframes confirm-text {
+
+    0% {
+        background-color: #e8e9ebfe;
+    }
+
+    40% {
+        background-color: #e8e9eb3a;
+    }
+
+    50% {
+        background-color: #e8e9eb;
+    }
+
+    100% {
+        background-color: #e8e9eb3a;
+    }
+
+}
+
 /* posted date and time of post details */
 .date-time {
     color: black;
