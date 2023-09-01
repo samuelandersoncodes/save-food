@@ -41,4 +41,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         loginNav.classList.add("active");
     }
 
+    if (window.location.pathname.includes('/signup/')) {
+        // makes signup nav link active
+        const signUpNav = document.getElementById('signup-nav');
+        removeActiveAll();
+        signUpNav.classList.add("active");
+    }
+
 });
