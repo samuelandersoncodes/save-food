@@ -34,4 +34,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         aboutNav.classList.add("active");
     }
 
+    if (window.location.pathname.includes('/login/')) {
+        // makes login nav link active
+        const loginNav = document.getElementById('login-nav');
+        removeActiveAll();
+        loginNav.classList.add("active");
+    }
+
 });
