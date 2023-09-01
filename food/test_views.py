@@ -187,3 +187,13 @@ class TestViews(TestCase):
         url = reverse('post_detail', kwargs={'slug': post.slug})
         self.response = self.client.post(url)
         self.assertEqual(self.response.status_code, 200)
+
+    def test_about_view(self):
+        """
+        this function gets the home page url
+        comfrims that its response status is good
+        and also confirm the accurate template used
+        """
+        response = self.client.get('/about/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'about.html')
