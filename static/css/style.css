@@ -193,6 +193,20 @@ main {
     min-height: 75vh;
 }
 
+/* about page styling */
+/* about text content styling */
+.about-text {
+    margin: 5px auto;
+}
+
+.about-text>p {
+    font-size: 140%;
+    color: black;
+    overflow: hidden;
+    text-justify: newspaper;
+    text-align: justify;
+}
+
 /* media queries (in descending order)*/
 /* media queries for big screens */
 @media only screen and (max-width: 1272px) {
@@ -260,6 +274,11 @@ main {
         max-height: 24rem;
     }
 
+    .about-text>p {
+        font-size: 120%;
+        text-align: justify-self;
+    }
+
 }
 
 @media only screen and (max-width: 575px) {
@@ -268,6 +287,19 @@ main {
         margin: 0.1rem auto;
         bottom: 0;
         font-size: 100%;
+    }
+
+    .about-text>p {
+        font-size: 100%;
+        text-align: justify-self;
+    }
+
+}
+
+@media only screen and (max-width: 435px) {
+
+    .about-text>p {
+        font-size: 90%;
     }
 
 }
@@ -284,6 +316,11 @@ main {
 
         margin-top: 6px;
 
+    }
+
+    .about-text>p {
+        font-size: 90%;
+        text-align: left;
     }
 
 }
