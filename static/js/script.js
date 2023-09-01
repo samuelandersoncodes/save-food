@@ -20,4 +20,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     };
 
+    if (window.location.pathname == '/') {
+        // Keep home nav active
+        const homeNav = document.getElementById('home-nav');
+        removeActiveAll();
+        homeNav.classList.add("active");
+    }
+
 });
