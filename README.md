@@ -34,3 +34,14 @@ The live link can be found here: [Live Site - Save Food](https://save-food-3b2a7
     - [Version Control](#version-control)
     - [Heroku Deployment](#heroku-deployment)
   - [Credits](#credits)
+
+# User-Experience-Design
+
+## The-Strategy-Plane
+
+### Site-Goals
+
+The site is aimed at providing a platform for people to share food. Registered users are able to chat owners of the posted food items and through that confirm their reservation and later pick it up at the given location. 
+Owners of food item posts are able to edit, delete and have a reserved status on their posts when necessary.
+
+This is to help in reducing food wastage and greenhouse gas emmision as well as saving natural resources and the planet. In the end people get fed and it is a happier society.
