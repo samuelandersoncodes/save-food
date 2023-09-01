@@ -28,6 +28,7 @@ class TestViews(TestCase):
             slug='banana',
             author=newuser,
             item_description='sweet banana',
+            featured_image='banana.jpg',
             status=1,
             address='Berlin, 122345')
         response = self.client.get('/post_detail/{post.slug}/')
@@ -47,6 +48,7 @@ class TestViews(TestCase):
             slug='banana',
             author=newuser,
             item_description='sweet banana',
+            featured_image='banana.jpg',
             status=1,
             address='Berlin, 122345'
         )
@@ -94,11 +96,12 @@ class TestViews(TestCase):
             slug='banana',
             author=newuser,
             item_description='sweet banana',
+            featured_image='banana.jpg',
             status=1,
             address='Berlin, 122345')
         response = self.client.get('/editpost/{post.pk}/')
         url = reverse('edit_post', kwargs={'pk': post.pk})
-        self.response = self.client.get(url)
+        self.response = self.client.get(url, follow=True)
         self.assertEqual(self.response.status_code, 200)
 
     def test_can_edit_post_repost(self):
@@ -114,11 +117,12 @@ class TestViews(TestCase):
             slug='Plantain',
             author=newuser,
             item_description='sweet plantain',
+            featured_image='banana.jpg',
             status=1,
             address='Berlin, 122345')
         response = self.client.post('/editpost/{post.pk}/')
         url = reverse('edit_post', kwargs={'pk': post.pk})
-        self.response = self.client.post(url)
+        self.response = self.client.post(url, follow=True)
         self.assertEqual(self.response.status_code, 200)
         edited_post = Post.objects.get(id=post.pk)
         self.assertEqual(edited_post.title, 'Plantain')
@@ -136,10 +140,12 @@ class TestViews(TestCase):
             author=newuser,
             item_description='sweet banana',
             status=1,
-            address='Berlin, 122345')
+            featured_image='banana.jpg',
+            address='Berlin, 122345'
+        )
         response = self.client.get('/deletepost/{post.pk}/')
         url = reverse('delete_post', kwargs={'pk': post.pk})
-        self.response = self.client.get(url)
+        self.response = self.client.get(url, follow=True)
         self.assertEqual(self.response.status_code, 200)
 
     def test_reserve_food_item_toggle(self):
