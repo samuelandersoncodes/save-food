@@ -48,4 +48,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         signUpNav.classList.add("active");
     }
 
+    if (window.location.pathname.includes('/logout/')) {
+        // makes logout nav link active
+        const logoutNav = document.getElementById('logout-nav');
+        removeActiveAll();
+        logoutNav.classList.add("active");
+    }
+
 });
