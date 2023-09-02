@@ -86,3 +86,67 @@ This epic is for all stories related to deploying the app to heroku so that the 
 **EPIC 6 - Documentation**
 
 This epic is for all document related stories and tasks that are needed to document the software development lifecycle of the application. It aims to deliver quality documentation, explaining all stages of development and necessary information on running, deploying and using the application.
+
+#### User Stories
+
+The following user stories (by epic) were completed over the 3 sprints:
+
+**EPIC 1 - Base Setup**
+
+As a developer, I need to create the base.html page and structure so that other pages can reuse the layout
+
+As a developer, I need to create static resources so that images, css and javascript work on the website
+
+As a developer, I need to set up the project so that it is ready for implementing the core features
+
+As a developer, I need to create the footer with social media links
+
+As a developer, I need to create the navbar so that users can navigate the website from all spheres of devices
+
+**EPIC 2 - Stand alone Pages**
+
+As a developer, I need to implement a 404 error page to alert users when they have accessed a page that doesn't exist
+
+As a developer, I need to implement a 500 error page to alert users when an internal server error occurs
+
+As a developer, I need to implement a 403 error page to redirect unauthorised users so that I can secure my views
+
+As a site owner, I need a home page so that users can view food item posts
+
+As a site owner, I need a post detail page so that users can view the details of food items and chat the respective owners for reservation
+
+As a site owner, I need an about page so that users can know more about the site
+
+**EPIC 3 - Authentication Epic**
+
+As a developer, I need to implement allauth so that users can sign up and have access to the websites features
+
+As a Site Owner, I want users to easily sign in with google so that site access and use is not complicated.
+
+As a site owner, I would like the allauth pages customized so that they match with the sites styling
+
+**EPIC 4 - Food item posts**
+
+As a user, I would like to be able to share a food item so that others can view and come for it
+
+As a user, I would like to view food item posts so that I can choose the needed food item
+
+As a user, I would like to be able to edit a my own food item post so that I can make changes when needed
+
+As a user, I would like to be notified when I make a post, edit or delete one so that I know it was added, updated nor deleted successfully
+
+As a user I would like to delete my own food item post when it is picked up or no longer available so that it is not a nuisance
+
+As a user I would like chat or comment on posts I am interested in so that I will be reserved for me and I will know when to pick it up
+
+**EPIC 5 - Deployment Epic**
+
+As a developer, I need to set up whitenoise so that my static files are served in deployment
+
+As a developer, I need to deploy the project to heroku so that it is live for users
+
+**EPIC 6 - Documentation**
+
+Tasks:
+
+* Complete readme documentation
