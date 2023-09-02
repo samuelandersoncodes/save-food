@@ -53,3 +53,8 @@ This project was developed using agile methodologies by delivering small feature
 All projects were assigned to epics, prioritized chronologically as, Must have, should have and could haves. They were assigned to sprints and stories based on their level of complexity. Implementation was done in order of the aforementioned priority. It was done this way to ensure that all core requirements were completed first to give the project a complete feel, with the nice to have features being added should there be the capacity.
 
 The Kanban board was created using github projects and can be located [here](https://github.com/users/samuelandersoncodes/projects/1) and can be viewed to see more information on the project cards. All stories except the documentation tasks have a full set of acceptance criteria in order to define the functionality that marks that story as complete.
+
+![Kanban image](docs/readme_images/save-food-kanban.jpg)
+
+### Save Food issues
+![Kanban image](docs/readme_images/save-food-issue.jpg)
