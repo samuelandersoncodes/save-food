@@ -58,3 +58,31 @@ The Kanban board was created using github projects and can be located [here](htt
 
 ### Save Food issues
 ![Kanban image](docs/readme_images/save-food-issue.jpg)
+
+#### Epics
+
+The project had 6 main Epics (milestones):
+
+**EPIC 1 - Base Setup**
+
+The base setup epic is for all stories needed for the base set up of the application. Without the base setup, the app would not be possible so it was the first epic to be delivered as all other features depend on the its completion.
+
+**EPIC 2 - Stand alone Pages**
+
+The stand alone pages epic is for small pages that did not have enough stories to warrant their own full epics. Instead of creating epics for tiny features, these small deliverables were all added under this epic.
+
+**EPIC 3 - Authentication Epic**
+
+The authentication epic is for all stories related to the registration, login and authorization of views. This epic provides critical functionality and value as without it users would not be able to securely post and edit food items as well as chat item owners for food reservation.
+
+**EPIC 4 - Food item posts Epic**
+
+The item posts epic is for all stories that relate to creating, viewing, updating and deleting food item posts. This allows logged in users who are owners of respective posts to easily edit and delete posts when necessary and also reserve food items for users who really need them. Through this epic, all other users are able to post and view other food item posts.
+
+**EPIC 5 - Deployment Epic**
+
+This epic is for all stories related to deploying the app to heroku so that the site is live for users.
+
+**EPIC 6 - Documentation**
+
+This epic is for all document related stories and tasks that are needed to document the software development lifecycle of the application. It aims to deliver quality documentation, explaining all stages of development and necessary information on running, deploying and using the application.
