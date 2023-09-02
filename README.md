@@ -206,3 +206,15 @@ The page takes six posts at a go in pagination. Therefore at the bottom of each 
 ![Post Cards next](docs/readme_images/save-food-cards.jpg)
 
 ![Post Cards previous](docs/readme_images/save-food-prev.jpg)
+
+``USER STORY - As a developer, I need to create a footer with social media links so that users can be more informed or communicate with site management``
+
+Implementation:
+
+**Footer**
+
+A footer has been added to the bottom of the site which is seen at the bottom of all site pages, this contains an Instagram, Facebook, Twitter and youtube links so that users can follow the site on social media if they want to keep up to date with site related activities and also communicate with management. These icons have aria-labels added to ensure users with assistive screen reading technology know the purpose of the links. They also open in new tabs for user convenience.
+
+The footer also comes with the site's copyright statement on top of the social media icons.
+
+![Footer](docs/readme_images/save-food-footer.jpg)
