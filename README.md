@@ -181,3 +181,28 @@ Implementation:
   The navigation menu is displayed on all pages and pops out into a hamburger menu on smaller devices. This will allow users to view the site from any device without taking up too much space on mobile devices.
 
   ![Navbar](docs/readme_images/save-food_nav.jpg)
+
+  ``USER STORY - As a site owner, I need a home page so that users can view food item posts``
+
+  Implementation:
+
+**Home Page**
+
+The home page contains a brief information on the top that informs users on the site's purpose. 
+When logged in, there is a 'share' button below the information section that allows users to share food items. 
+The section below the aforementioned information or the 'share' button when user is logged in makes room for all posted food items.
+
+Each posted food item is found in a card with fields of featured image on top, name of the post owner beneath it, the title and description of the posted item, the pick up location, then comes the date and time of the the post. 
+
+At the bottom of each card is a 'reserve' button that takes the user to the post's detail page to enable the user to chat the post owner for the food item reservation and pick up. 
+Only owners of posts can through this button tag their respective posts as reserved which is seen on the post detail page as they are redirected there upon a click. This is to help post owners identify which of their posted items are reserved and also prevent all users from playing with the reserve toggle.
+
+The page takes six posts at a go in pagination. Therefore at the bottom of each sixth post is the 'next' button that takes users to older posts. When users are on older posts, they can easily come back to fresher posts by clicking the 'prev' button.
+
+![Info Section default](docs/readme_images/save-food-info-d.jpg)
+
+![Info Section logged in](docs/readme_images/save-food-info.jpg)
+
+![Post Cards next](docs/readme_images/save-food-cards.jpg)
+
+![Post Cards previous](docs/readme_images/save-food-prev.jpg)
