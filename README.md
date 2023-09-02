@@ -150,3 +150,11 @@ As a developer, I need to deploy the project to heroku so that it is live for us
 Tasks:
 
 * Complete readme documentation
+
+## The-Scope-Plane
+
+* Responsive Design - Site should be fully functional on all devices above 320px
+* Hamburger menu for mobile devices
+* Ability to perform CRUD functionality on food item posts
+* Restricted role based features
+* Home page with site information 
