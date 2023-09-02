@@ -157,4 +157,27 @@ Tasks:
 * Hamburger menu for mobile devices
 * Ability to perform CRUD functionality on food item posts
 * Restricted role based features
-* Home page with site information 
+* Home page with site information
+
+## The-Structure-Plane
+
+### Features
+
+``USER STORY - As a developer, I need to create the navbar so that users can navigate the website from all sizes of devices``
+
+Implementation:
+
+**Navigation Menu**
+
+ The Navigation contains links for Home, About and has allauth options for login, signup and logout.
+
+ The following navigation items are available on all pages:
+  * Home -> index.html - Visible to all
+  * About -> about.html - Visible to all
+  * Login -> login.html - Visible to logged out users
+  * signup -> signup.html - Visible to logged out users
+  * Logout -> logout.html - Visible to logged in users
+
+  The navigation menu is displayed on all pages and pops out into a hamburger menu on smaller devices. This will allow users to view the site from any device without taking up too much space on mobile devices.
+
+  ![Navbar](docs/readme_images/save-food_nav.jpg)
