@@ -101,6 +101,8 @@ As a developer, I need to set up the project so that it is ready for implementin
 
 As a developer, I need to create the footer with social media links
 
+As a developer, I need to create a logo so that users can easily identify the site by it as a brand
+
 As a developer, I need to create the navbar so that users can navigate the website from all spheres of devices
 
 **EPIC 2 - Stand alone Pages**
@@ -163,6 +165,16 @@ Tasks:
 
 ### Features
 
+``USER STORY - As a developer, I need to create a logo so that users can easily identify the site by it as a brand``
+
+Implementation:
+
+**Logo**
+
+A logo has been added to the top left corner of the site which is seen on all site pages. This helps users to easily identify the site.
+
+![Logo](docs/readme_images/save-food-logo.jpg)
+
 ``USER STORY - As a developer, I need to create the navbar so that users can navigate the website from all sizes of devices``
 
 Implementation:
@@ -218,3 +230,4 @@ A footer has been added to the bottom of the site which is seen at the bottom of
 The footer also comes with the site's copyright statement on top of the social media icons.
 
 ![Footer](docs/readme_images/save-food-footer.jpg)
+
