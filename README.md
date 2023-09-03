@@ -219,6 +219,18 @@ The page takes six posts at a go in pagination. Therefore at the bottom of each 
 
 ![Post Cards previous](docs/readme_images/save-food-prev.jpg)
 
+``As a site owner, I need an about page so that users can know more about the site``
+
+Implementation:
+
+**About Page**
+
+On the top of the About page is a heading that informs the user on the page's purpose. This page is available to all users without restrictions.
+
+The About page contains information on the conception and ideology of the site.
+
+![About page](docs/readme_images/about-page.jpg)
+
 ``USER STORY - As a developer, I need to create a footer with social media links so that users can be more informed or communicate with site management``
 
 Implementation:
