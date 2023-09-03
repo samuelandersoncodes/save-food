@@ -262,3 +262,16 @@ Upon clicking on the 'share food' button on the home and postdetail pages, logge
 Below the form are two buttons; 'submit' and 'back' buttons that submits the post and takes the user back to the home page respectively.
 
 ![Add Post Page](docs/readme_images/addpost.jpg)
+
+
+``As a user, I would like to be able to edit a my own food item post so that I can make changes when needed``
+
+Implementation:
+
+**Edit Post Page**
+
+On the top of this form is a heading that tells the purpose of the page 'to edit the post in question.'
+
+Only owners of posts are able to edit their posts. When a user clicks on the 'edit' link on the home and or postdetail pages, they are directed to the editpost page. Where there is a prepopulated form with their previous post details in the fields of title, featured image, the description of the food item and the pick up location. Here, they are able to make amends and update the post through the 'update' button or return back to the home page through the 'back' button.
+
+![Edit Post Page](docs/readme_images/edit-post.com.jpg)
