@@ -275,3 +275,15 @@ On the top of this form is a heading that tells the purpose of the page 'to edit
 Only owners of posts are able to edit their posts. When a user clicks on the 'edit' link on the home and or postdetail pages, they are directed to the editpost page. Where there is a prepopulated form with their previous post details in the fields of title, featured image, the description of the food item and the pick up location. Here, they are able to make amends and update the post through the 'update' button or return back to the home page through the 'back' button.
 
 ![Edit Post Page](docs/readme_images/edit-post.com.jpg)
+
+``As a user I would like to delete my own food item post when it is picked up or no longer available so that it is not a nuisance``
+
+Implementation:
+
+**Delete Post Page**
+
+On the top of this form is a heading that tells the purpose of the page 'to delete the post in question.'
+
+Only owners of posts are able to delete their posts. When a user clicks on the 'delete' link on the home and or postdetail pages, they are directed to the deletepost page. Where they are asked to confirm the deletion by clicking the 'delete' button or return back to the home page through the 'cancel' button.
+
+![Edit Post Page](docs/readme_images/delete.jpg)
