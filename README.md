@@ -247,6 +247,22 @@ Then comes the form for username and password followed by a 'remember me' checkb
 
 ![Log in](docs/readme_images/login-page.jpg)
 
+``As a developer, I need to implement allauth so that users can sign up and have access to the website's features``
+
+Implementation:
+
+**Sign up page**
+
+Upon clicking the sign up link anywhere on the site, users are directed to the signup page to make a registration in order for them to be able to get full access to the site's features.
+
+On the top of the page is a heading and text that informs the user on the page's purpose and a welcome information respectively.
+
+Below that is a "Sign in with google" that enables users to easily sign in with their google accout. This is a time saver feature that quikens a secured access to the site.
+
+Then comes the form for username, optional email, password and password confirmation fields. Beneath that is the sign up button that enables users to register on the site.
+
+![Sign up](docs/readme_images/signup-page.jpg)
+
 ``USER STORY - As a developer, I need to create a footer with social media links so that users can be more informed or communicate with site management``
 
 Implementation:
