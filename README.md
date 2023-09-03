@@ -301,3 +301,15 @@ On each Posting, Updating and Deleting operations, users are notified with a suc
 ![Editing success message](docs/readme_images/edit-success-msg.jpeg)
 
 ![Deleting success message](docs/readme_images/delete-success-msg.jpeg)
+
+``As a user I would like to chat or comment on posts I am interested in so that it will be reserved for me and I will know when to pick it up``
+
+Implementation:
+
+**Chat Box**
+
+The chat box is located on the side of the post's details page on large screens and at the bottom on small screens. At the top of it is an animated heading in red to attract the attention of logged in users who are not owners of the post in question to chat the food item owner for reservation and pick it up if they are really serious about getting that food item.
+
+Below the body of the chat text is a submit button that enables the user to send their message after they have written them.
+
+![Chat box](docs/readme_images/chatbox.jpg)
