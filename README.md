@@ -139,7 +139,7 @@ As a user, I would like to be notified when I make a post, edit or delete one so
 
 As a user I would like to delete my own food item post when it is picked up or no longer available so that it is not a nuisance
 
-As a user I would like chat or comment on posts I am interested in so that I will be reserved for me and I will know when to pick it up
+As a user I would like to chat or comment on posts I am interested in so that it will be reserved for me and I will know when to pick it up
 
 **EPIC 5 - Deployment Epic**
 
@@ -301,4 +301,3 @@ On each Posting, Updating and Deleting operations, users are notified with a suc
 ![Editing success message](docs/readme_images/edit-success-msg.jpeg)
 
 ![Deleting success message](docs/readme_images/delete-success-msg.jpeg)
-
