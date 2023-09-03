@@ -332,3 +332,18 @@ A 404 page has been implemented and will display if a user navigates to a broken
 The 404 page will allow the user to easily navigate back to the Home page through the 'back' button
 
 ![404 error page](docs/readme_images/error-404.jpg)
+
+``USER STORY - As a developer, I need to implement a 403 error page to alert users when accessing a page or view that they do not have permission to view``
+
+Implementation:
+
+**403 Page**
+
+A 403 error page has been implemented to provide feedback to the user when they try to access unauthorized content. Users will be directed to this page if they alter the URL's and attempt to edit, delete or access pages that are restricted. 
+
+This covers:
+
+* Edit Post - Only authorized users
+* Delete Post - Only authorized users
+
+![403 error page](docs/readme_images/error-403.jpg)
