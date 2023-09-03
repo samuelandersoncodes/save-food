@@ -231,3 +231,22 @@ The footer also comes with the site's copyright statement on top of the social m
 
 ![Footer](docs/readme_images/save-food-footer.jpg)
 
+``As a site owner, I need a post detail page so that users can view the details of food items and chat the respective owners for reservation``
+
+Implementation:
+
+**Post Detail Page**
+
+At the very top of the post detail page is a 'share food' Button that allows users to share food item posts just like that of the home page.
+
+The post detail page has all the details of the posted food item inherited from the home page (fields of title on top, then comes the featured image, name of the post owner and date and time of the the post beneath it, the description of the posted item and the pick up location. At the bottom is the 'reserve' button for only owners of posts.)
+
+In addition, there is a a chat box (on the side of the post's details on large screens and at the bottom on small screens) where logged in users who are interested in picking up food items can through a chat with the owner of the food item reserve the food item. Below the body of the chat text is a submit button that enables the user to send their message after they have written them.
+
+At the top of this chat box is an animated heading in red for logged in users who are not owners of the post. It brings their attention to chat the food item owner for reservation and pick up if they are really serious about getting that food item.
+
+Owners of posts are able to mark their items as reserved through the 'reserve' button. This helps them to know or remember that the item is reserved for someone who will soon pick it up. Owners are encouraged through a heading in the chat box section to reserve food for only seroius users who really need the items. Thus, eliminating the the trend of asking for something but not going for it in the end.
+
+At the bottom of this page is an edit and delete link through which owners of posts can edit and delete their posts when necessary.
+
+![Post Detail Page](docs/readme_images/post-detail.com.jpg)
