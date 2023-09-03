@@ -250,3 +250,15 @@ Owners of posts are able to mark their items as reserved through the 'reserve' b
 At the bottom of this page is an edit and delete link through which owners of posts can edit and delete their posts when necessary.
 
 ![Post Detail Page](docs/readme_images/post-detail.com.jpg)
+
+``As a user, I would like to be able to share a food item so that others can view and come for it``
+
+Implementation:
+
+**Add Post Page**
+
+Upon clicking on the 'share food' button on the home and postdetail pages, logged in users are taken to the addpost page. Where there is a form to fill in title, featured image, the description of the food item and the pick up location fields. On the top of this form is a heading that tells the purpose of the page 'to post a food item.'
+
+Below the form are two buttons; 'submit' and 'back' buttons that submits the post and takes the user back to the home page respectively.
+
+![Add Post Page](docs/readme_images/addpost.jpg)
