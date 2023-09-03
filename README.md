@@ -135,7 +135,7 @@ As a user, I would like to view food item posts so that I can choose the needed 
 
 As a user, I would like to be able to edit a my own food item post so that I can make changes when needed
 
-As a user, I would like to be notified when I make a post, edit or delete one so that I know it was added, updated nor deleted successfully
+As a user, I would like to be notified when I make a post, edit or delete one so that I know it was added, updated or deleted successfully
 
 As a user I would like to delete my own food item post when it is picked up or no longer available so that it is not a nuisance
 
