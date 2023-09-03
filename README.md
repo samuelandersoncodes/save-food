@@ -231,6 +231,22 @@ The About page contains information on the conception and ideology of the site.
 
 ![About page](docs/readme_images/about-page.jpg)
 
+``As a developer, I need to implement allauth so that users can log in and have access to the website's features``
+
+Implementation:
+
+**Log in page**
+
+Upon clicking the log in link anywhere on the site, users are directed to the log in page to log in so that they can be able to get full access to the site's features.
+
+On the top of the page is a heading and text that informs the user on the page's purpose and a welcome information respectively.
+
+Below that is a "Sign in with google" button that enable users to easily sign in with their google accout. This is a time saver feature that quickens a secured access to the site.
+
+Then comes the form for username and password followed by a 'remember me' checkbox. Beneath that is the sign in button that enables users to log in if they are already registered.
+
+![Log in](docs/readme_images/login-page.jpg)
+
 ``USER STORY - As a developer, I need to create a footer with social media links so that users can be more informed or communicate with site management``
 
 Implementation:
