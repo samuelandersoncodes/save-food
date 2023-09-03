@@ -312,4 +312,7 @@ The chat box is located on the side of the post's details page on large screens 
 
 Below the body of the chat text is a submit button that enables the user to send their message after they have written them.
 
+After a text is submitted, the user is notified on the success of submission. 
+
 ![Chat box](docs/readme_images/chatbox.jpg)
+![Chat box alert](docs/readme_images/chatbox-alert.jpg)
