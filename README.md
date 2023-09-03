@@ -316,3 +316,19 @@ After a text is submitted, the user is notified on the success of submission.
 
 ![Chat box](docs/readme_images/chatbox.jpg)
 ![Chat box alert](docs/readme_images/chatbox-alert.jpg)
+
+**Error Pages**
+
+``USER STORY - As a developer, I need to implement a 404 error page to alert users when they have accessed a page that does not exist``
+
+Implementation:
+
+**404 Page**
+
+As a developer, I need to implement a 404 error page so that users are redirected there when they try to access a page that is not available to them.
+
+A 404 page has been implemented and will display if a user navigates to a broken link or a page they are not suppose to have access to.
+
+The 404 page will allow the user to easily navigate back to the Home page through the 'back' button
+
+![404 error page](docs/readme_images/error-404.jpg)
