@@ -347,3 +347,13 @@ This covers:
 * Delete Post - Only authorized users
 
 ![403 error page](docs/readme_images/error-403.jpg)
+
+``USER STORY - As a developer, I need to implement a 500 error page to alert users when an internal server error occurs``
+
+Implementation:
+
+**500 Page**
+
+A 500 error page has been implemented to alert users when an internal server error occurs.
+
+![500 error page](docs/readme_images/error-500.jpg)
