@@ -287,3 +287,18 @@ On the top of this form is a heading that tells the purpose of the page 'to dele
 Only owners of posts are able to delete their posts. When a user clicks on the 'delete' link on the home and or postdetail pages, they are directed to the deletepost page. Where they are asked to confirm the deletion by clicking the 'delete' button or return back to the home page through the 'cancel' button.
 
 ![Edit Post Page](docs/readme_images/delete.jpg)
+
+``As a user, I would like to be notified when I make a post, edit or delete one so that I know it was added, updated or deleted successfully``
+
+Implementation:
+
+**Notifications**
+
+On each Posting, Updating and Deleting operations, users are notified with a success message to alert and confirm to them on the operation success.
+
+![Posting success message](docs/readme_images/post-success-msg.jpeg)
+
+![Editing success message](docs/readme_images/edit-success-msg.jpeg)
+
+![Deleting success message](docs/readme_images/delete-success-msg.jpeg)
+
