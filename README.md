@@ -446,3 +446,9 @@ A 500 error page has been implemented to alert users when an internal server err
 ![Logout Page lg](docs/readme_images/wireframe-signout-lg.jpg)
 
 ![Logout Page sm](docs/readme_images/wireframe-signout-sm.JPG)
+
+- Add post page
+
+![Add Post Page lg](docs/readme_images/wireframe-addpost-lg.jpg)
+
+![Add Post Page sm](docs/readme_images/wireframe-addpost-sm.JPG)
