@@ -464,3 +464,9 @@ A 500 error page has been implemented to alert users when an internal server err
 ![403 Error Page lg](docs/readme_images/wireframe-403-lg.jpg)
 
 ![403 Error Page sm](docs/readme_images/wireframe-403-sm.JPG)
+
+- 404 error page
+
+![404 Error Page lg](docs/readme_images/wireframe-404-lg.jpg)
+
+![404 Error Page sm](docs/readme_images/wireframe-404-sm.JPG)
