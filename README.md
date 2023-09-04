@@ -423,6 +423,12 @@ A 500 error page has been implemented to alert users when an internal server err
 
 ![Post Detail Page sm](docs/readme_images/wireframe-post-d-sm.JPG)
 
+- About page
+
+![About Page lg](docs/readme_images/wireframe-about-lg.jpg)
+
+![About Page sm](docs/readme_images/Wireframe-about-sm.JPG)
+
 - Signup page
 
 ![SignUp Page lg](docs/readme_images/wireframe-signup-lg.jpg)
