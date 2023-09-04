@@ -429,3 +429,10 @@ A 500 error page has been implemented to alert users when an internal server err
 
 ![SignUp Page sm](docs/readme_images/wireframe-signup-sm.JPG)
 
+- Login page
+
+![Login Page lg](docs/readme_images/wireframe-signin-lg.jpg)
+
+![Login Page sm](docs/readme_images/wireframe-signin-sm.JPG)
+
+
