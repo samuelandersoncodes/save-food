@@ -458,3 +458,9 @@ A 500 error page has been implemented to alert users when an internal server err
 ![Edit Post Page lg](docs/readme_images/wireframe-edit-lg.jpg)
 
 ![Edit Post Page sm](docs/readme_images/wireframe-edit-sm.JPG)
+
+- 403 error page
+
+![403 Error Page lg](docs/readme_images/wireframe-403-lg.jpg)
+
+![403 Error Page sm](docs/readme_images/wireframe-403-sm.JPG)
