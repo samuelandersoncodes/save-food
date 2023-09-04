@@ -452,3 +452,9 @@ A 500 error page has been implemented to alert users when an internal server err
 ![Add Post Page lg](docs/readme_images/wireframe-addpost-lg.jpg)
 
 ![Add Post Page sm](docs/readme_images/wireframe-addpost-sm.JPG)
+
+- Edit post page
+
+![Edit Post Page lg](docs/readme_images/wireframe-edit-lg.jpg)
+
+![Edit Post Page sm](docs/readme_images/wireframe-edit-sm.JPG)
