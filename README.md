@@ -505,3 +505,8 @@ The main color schemes for the website are light gray (#e8e9eb9a) mostly found o
 ### Typography
 
 The Kadwa (and serif as a backup) font was used throughout the website for text and Russo One for headings. These fonts were imported into the style sheet from google fonts.
+
+### Imagery
+
+The Website logo was coded with an icon from Font Awesome. The placeholder image and images used for test posts were taken from google which are royalty-free images.
+
