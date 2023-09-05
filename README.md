@@ -501,3 +501,7 @@ Environment variables were stored in an env.py for local development for securit
 ### Colour-Scheme
 
 The main color schemes for the website are light gray (#e8e9eb9a) mostly found on the footer and navbar areas. Charcoal gray (#36454f) and black (#000000) were mostly used for the fonts and icons. White (#FFFFFF) was often used for button texts while a lighter version of Charcoal gray (#36454f) is used fo the background of most of the buttons except the signout button which has a red (#ff0000) background color and a variety of it for the reserve button and its hover. Warnig texts like the text above the signout button are also in red.
+
+### Typography
+
+The Kadwa (and serif as a backup) font was used throughout the website for text and Russo One for headings. These fonts were imported into the style sheet from google fonts.
