@@ -494,3 +494,10 @@ The entity relationship diagram below shows the schemas for each of the models a
 Views were secured by using the django class based view mixin, UserPassesTextMixin. A test function was created to use the mixin and checks were ran to ensure that the user who is trying to access the page is authorized. Any staff restricted functionality, user edit/delete functionality listed in the features was secured using this method.
 
 Environment variables were stored in an env.py for local development for security purposes to ensure no secret keys, api keys or sensitive information were commited to the repository. In production, these variables were added to the heroku config vars within the project.
+
+## The-Surface-Plane
+### Design
+
+### Colour-Scheme
+
+The main color schemes for the website are light gray (#e8e9eb9a) mostly found on the footer and navbar areas. Charcoal gray (#36454f) and black (#000000) were mostly used for the fonts and icons. White (#FFFFFF) was often used for button texts while a lighter version of Charcoal gray (#36454f) is used fo the background of most of the buttons except the signout button which has a red (#ff0000) background color and a variety of it for the reserve button and its hover. Warnig texts like the text above the signout button are also in red.
