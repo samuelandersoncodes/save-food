@@ -477,3 +477,14 @@ A 500 error page has been implemented to alert users when an internal server err
 
 ![500 Error Page sm](docs/readme_images/wireframe-500-sm.JPG)
 
+### Database-Design
+
+The database was designed to allow CRUD functionality to be available to registered users, when signed in. The post model is at the heart of the application as it is connected to the sharing, editing, deleting and commenting on posted items. It is linked by primary/foreign key relationships.
+
+The Comment model is tied to the post model through the post model's foreign key. This allows for users to leave messages for item owners and make them reserve food items for pick ups.
+
+Postings are related to the author (user) by a Foreign Key which allows the users to be able to view, update delete posts attached to their accounts.
+
+The entity relationship diagram below shows the schemas for each of the models and how they are related.
+
+![Entity Relationship Diagram](docs/readme_images/database-d.JPG)
