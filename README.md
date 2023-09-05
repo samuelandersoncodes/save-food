@@ -530,3 +530,34 @@ The Website logo was coded with an icon from Font Awesome. The placeholder image
   - wireframes were created using Mockflow from https://wireframepro.mockflow.com/editor.jsp?editor=off&perm=Owner&projectid=MiaEEG3C9pb&publicid=4808502b362b4579a9b8728dd2de6dfe&space=default#/page/4a5ea2c19de649a588f44456a8be0fa2
 - Google Fonts
   - Google fonts was used for the font styling
+
+**Python Modules Used**
+
+* Django Class based views (ListView, UpdateView, DeleteView, CreateView, TemplateView, FormView) - Used for the classes to create, read, update and delete
+* Mixins (LoginRequiredMixin, UserPassesTestMixin) - Used to enforce login required on views and test user is authorized to perform actions
+* messages - Used to pass messages to display feedback to the user upon actions
+* HttpResponseRedirect, reverse - Used to redirect users to other specified pages
+* render - Used to render templates 
+* get_object_or_404 - Used to get single objects
+
+**External Python Modules**
+
+* cloudinary==1.29.0 - Cloundinary was set up for use but no custom uploads were made, settings remain for future development
+* crispy-bootstrap5==0.6 - This was used to allow bootstrap5 use with crispy forms
+* dj-database-url==0.5.0 - Used to parse database url for production environment
+* dj3-cloudinary-storage==0.0.6 - Storage system to work with cloudinary
+* Django==3.2.20 - Framework used to build the application
+* django-allauth==0.54.0 - Used for the sites authentication system, sign up, log in and logout.
+* django-crispy-forms==1.14.0 - Used to style the forms on render
+* django-model-utils==4.2.0 - Installed as dependency with another package
+* gunicorn==20.1.0 - Installed as dependency with another package
+* oauthlib==3.2.2 - Installed as dependency with another package
+* psycopg2==2.9.6 - Needed for heroku deployment
+* python3-openid==3.2.0 - Installed as dependency with another package
+* requests-oauthlib==1.3.1 - Installed as dependency with another package (allauth authentication)
+* sqlparse==0.4.4 - Installed as dependency with another package
+* urllib3==1.26.16 - Installed as dependency with another package
+* PyJWT==2.8.0 - Installed as dependency with another package
+* python-slugify==8.0.1 - Used to turn post titles into slugs
+* asgiref==3.7.2 - Installed as dependency with another package
+* whitenoise==6.2.0 - Used to serve static files directly without use of static resource provider like cloundinary
