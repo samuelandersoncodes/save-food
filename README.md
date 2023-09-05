@@ -510,3 +510,23 @@ The Kadwa (and serif as a backup) font was used throughout the website for text 
 
 The Website logo was coded with an icon from Font Awesome. The placeholder image and images used for test posts were taken from google which are royalty-free images.
 
+- HTML
+  - The structure of the Website was developed using HTML as the main language.
+- CSS
+  - The Website was styled using custom CSS in an external file.
+- JavaScript
+  - JavaScript was used to make the implement the copyright date and the nav item active switches.
+- Python
+  - Python was the main programming language used for the application using the Django Framework.
+- Gitpod
+  - The website was developed using Gitpod IDE
+- GitHub
+  - Source code is hosted on GitHub
+- Git
+  - Used to commit and push code during the development of the Website
+- Font Awesome
+  - This was used for various icons throughout the site
+- Mockflow
+  - wireframes were created using Mockflow from https://wireframepro.mockflow.com/editor.jsp?editor=off&perm=Owner&projectid=MiaEEG3C9pb&publicid=4808502b362b4579a9b8728dd2de6dfe&space=default#/page/4a5ea2c19de649a588f44456a8be0fa2
+- Google Fonts
+  - Google fonts was used for the font styling
