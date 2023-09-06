@@ -402,6 +402,13 @@ A 500 error page has been implemented to alert users when an internal server err
 
 ![500 error page](docs/readme_images/error-500.jpg)
 
+**Favicon**
+
+    * A site wide favicon was implemented.
+    * This provides an image in the tabs header to allow the user to easily identify the website if they have multiple tabs opened.
+
+![Favicon](static/favicon/favicon.ico)
+
 ### Features Left To Implement
 - In a future release I would like to implement a search filter that will help users to quickly find a food item by location, food category and posted time and date. This will save them time as compared to a manual search.
 - The address section will also make use of django's AddressField. This will make it easier for users to input their addresses for food item pick ups.
