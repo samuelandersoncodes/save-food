@@ -61,9 +61,9 @@
                             <div class="text-center mb-0 mt-4">
                                 {% if not user.is_authenticated %}
                                 <p>
-                                <a href="{% url 'account_signup' %}" class="text-decoration-none">signup</a>
-                                or <a href="{% url 'account_login' %}" class="text-decoration-none">login</a>
-                                to reserve this item via chat
+                                    <a href="{% url 'account_signup' %}" class="text-decoration-none">signup</a>
+                                    or <a href="{% url 'account_login' %}" class="text-decoration-none">login</a>
+                                    to reserve this item via chat
                                 </p>
                                 {% endif %}
                             </div>
@@ -71,15 +71,16 @@
                                 {% if user.is_authenticated %}
                                 {% if user.id == post.author.id %}
                                 <p>
-                                    <a href="{% url 'edit_post' post.pk %}" class="px-3">edit</a>
-                                    <a href="{% url 'delete_post' post.pk %}">delete</a>
+                                    <a href="{% url 'edit_post' post.pk %}" class="px-3">edit post</a>
+                                    <a href="{% url 'delete_post' post.pk %}">delete post</a>
                                 </p>
                                 {% endif %}
                                 {% if not user.id == post.author.id %}
-                                <p id="placeholder-links">
-                                    <a href="{% url 'edit_post' post.pk %}" class="px-3 text-white">edit</a>
-                                    <a href="{% url 'delete_post' post.pk %}" class="text-white">delete</a>
-                                </p>
+                                <div>
+                                    <p class="text-center">
+                                        Click <strong>reserve</strong>, message item owner and get the food
+                                    </p>
+                                </div>
                                 {% endif %}
                                 {% endif %}
                             </div>
