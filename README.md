@@ -601,8 +601,7 @@ Steps:
 
 1. Navigate to [save-food](https://save-food-3b2a71b51608.herokuapp.com/) and click Sign Up
 2. Click Sign in with Google
-3. On the google logiin page click the 'continue' button
-4. Then choose an account to continue 
+3. Then choose an account to continue (only if you have a google account)
 
 Expected:
 
