@@ -562,6 +562,49 @@ The Website logo was coded with an icon from Font Awesome. The placeholder image
 * asgiref==3.7.2 - Installed as dependency with another package
 * whitenoise==6.2.0 - Used to serve static files directly without use of static resource provider like cloundinary
 
+## Testing
+
+## Functional Testing
+
+**Authentication**
+
+Description:
+
+Ensure a user can sign up to the website
+
+Steps:
+
+1. Navigate to [save-food](https://save-food-3b2a71b51608.herokuapp.com/) and click Sign Up
+2. Enter username, email (optional) password and and confirm your password 
+3. Click Sign up
+
+Expected:
+
+User is successfully registered on the site and redirected to the home page. A success message is displayed to confirm the registeration
+
+Actual: 
+
+User is successfully registered on the site with a confirmation message displayed and then redirected to the home page.
+
+<hr>
+
+Alternative (sign up shortcut)
+
+Steps:
+
+1. Navigate to [save-food](https://save-food-3b2a71b51608.herokuapp.com/) and click Sign Up
+2. Click Sign in with Google
+3. On the google logiin page click the 'continue' button
+4. Then choose an account to continue 
+
+Expected:
+
+User is successfully registered on the site and redirected to the home page. A success message is displayed to confirm the registeration
+
+Actual: 
+
+User is successfully registered on the site with a confirmation message displayed and then redirected to the home page.
+
 ## Deployment
 
 ### Version Control
