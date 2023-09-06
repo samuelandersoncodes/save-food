@@ -605,6 +605,25 @@ Actual:
 
 User is successfully registered on the site with a confirmation message displayed and then redirected to the home page.
 
+<hr>
+
+Description:
+
+Ensure a user can log in once signed up
+
+Steps:
+1. Navigate to [save-food](https://save-food-3b2a71b51608.herokuapp.com/)
+2. Enter login details created in previous test case
+3. Click login
+
+Expected:
+
+User is successfully logged in and redirected to the home page with a success message confirming the sign in.
+
+Actual:
+
+User is successfully logged in and redirected to the home page with a success message confirming the sign in.
+
 ## Deployment
 
 ### Version Control
