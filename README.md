@@ -606,3 +606,22 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 The app should now be deployed.
 
 The live link can be found here: [Live Site](https://save-food-3b2a71b51608.herokuapp.com/)
+
+## Credits 
+
+* [Code Institute](https://github.com/Code-Institute-Org/gitpod-full-template)
+  * I appreciate Code institute's support and their gitpod template.
+
+* [Font Awesome](https://fontawesome.com/icons)
+    * Code was used from this website to create the Save Food logo and the social media icons in the footer.
+    * Styles were changed to suit styling on the Web application.
+
+* [Google Fonts](https://fonts.google.com/)
+    * The fonts (Kadwa and Russo One) used on this web application were imported from google fonts.
+
+* Persons
+     * I thank Gareth Mcgirr for mentoring me throughout the project.
+
+    * A big appreciation to Courage Krah whose PhD project triggered the building of this project.
+    
+    * I thank Olena Olkhovyk for inspiring me and giving me styling ideas.
