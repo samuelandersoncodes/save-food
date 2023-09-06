@@ -76,7 +76,7 @@
                                 </p>
                                 {% endif %}
                                 {% if not user.id == post.author.id %}
-                                <p>
+                                <p id="placeholder-links">
                                     <a href="{% url 'edit_post' post.pk %}" class="px-3 text-white">edit</a>
                                     <a href="{% url 'delete_post' post.pk %}" class="text-white">delete</a>
                                 </p>
