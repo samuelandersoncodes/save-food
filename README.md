@@ -561,3 +561,21 @@ The Website logo was coded with an icon from Font Awesome. The placeholder image
 * python-slugify==8.0.1 - Used to turn post titles into slugs
 * asgiref==3.7.2 - Installed as dependency with another package
 * whitenoise==6.2.0 - Used to serve static files directly without use of static resource provider like cloundinary
+
+## Deployment
+
+### Version Control
+
+The site was created using the Gitpod Code editor and pushed to github to the 'save-food' remote repository.
+
+The following git commands were used throughout development to push code to the repository:
+
+```git add <filename>``` - This command was used to add the file(s) to the staging area before they are committed.
+
+```git commit -m “commit message”``` - This command was used to commit changes to the local repository queued for the final push.
+
+```git push``` - This command was used to push all committed code to the remote repository on github.
+
+```git commit --amend -m "Amended git commit message"``` - This command was used to correct mistakenly/misspelt pushed commit messages.
+
+```git push -f``` - This command was used to force push an amended commit message.
