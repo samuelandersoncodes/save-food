@@ -754,6 +754,10 @@ Testing was performed to ensure all navigation links on the respective pages, na
 
 All navigation links directed to the correct pages as expected.
 
+**Footer**
+
+Testing was performed on the footer links by clicking the font awesome icons and ensuring that the instagram icon opened instagram in a new tab, the facebook icon opened facebook in a new tab and the twitter icon opened twitter in a new tab and the youtube icon opened youtube in a new tab. These behaved as expected.
+
 ## Deployment
 
 ### Version Control
