@@ -682,7 +682,7 @@ Ensure an old post can be updated.
 
 Steps:
 
-1. Navigate to [page](https://save-food-3b2a71b51608.herokuapp.com/editpost/<post-id>) or click on the edit post links on  the home or post detail pages.
+1. Navigate to [page](https://save-food-3b2a71b51608.herokuapp.com/editpost/<post-id>) or click on the edit post links on the home or post detail pages.
 2. Change any all or some of the following:
     - Title: eggs
     - Previous featured image: old image can remain if you dont want to change it
@@ -698,6 +698,25 @@ Form successfully submits and a success message is displayed to confrim update.
 Actual:
 
 Form successfully submits and a success message is displayed to confrim update.
+
+<hr>
+
+Description:
+
+Ensure post can be deleted.
+
+Steps:
+
+1. Navigate to [page]((https://save-food-3b2a71b51608.herokuapp.com/deletepost/<post-id>/delete) or click on the delete post links on the home or post detail pages.
+2. Click on the 'Delete' button to confirm the removal 
+
+Expected:
+
+Post is successfully deleted and a success message is displayed to confrim deletion.
+
+Actual:
+
+Post is successfully deleted and a success message is displayed to confrim deletion.
 
 ## Deployment
 
