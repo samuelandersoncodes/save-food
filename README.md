@@ -765,6 +765,14 @@ Tests were performed on posts and comments to ensure that:
 1. A user cannot edit and or delete a post that does not belong to him or her
 2. Forms cannot be submitted when required fields are empty
 
+## Unit Testing
+
+Unit tests were carried out to test core functionality in forms, template views models and redirects. These can be found in the respective test files in the food app.
+
+Results:
+
+![unit tests](docs/testing/coverage_report.jpg)
+
 ## Deployment
 
 ### Version Control
