@@ -38,7 +38,7 @@ body {
 /* home page post card styling */
 #item-card {
     height: auto;
-    min-height: 42rem;
+    min-height: 44rem;
 }
 
 /* navigation styling */
@@ -211,6 +211,14 @@ main {
 
 /* media queries (in descending order)*/
 /* media queries for big screens */
+@media only screen and (max-width: 1285px) {
+
+    #item-card {
+        min-height: 46rem;
+    }
+
+}
+
 @media only screen and (max-width: 1272px) {
 
     #img-home {
@@ -218,7 +226,7 @@ main {
     }
 
     #item-card {
-        min-height: 38rem;
+        min-height: 42rem;
     }
 
 }
@@ -228,10 +236,6 @@ main {
     #img-home {
         height: 14rem;
     }
-
-}
-
-@media only screen and (max-width: 1016px) {
 
     #item-card {
         min-height: 40rem;
@@ -252,10 +256,10 @@ main {
 }
 
 /* media queries for small screens */
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 824px) {
 
     #item-card {
-        min-height: 39rem;
+        min-height: 38.5rem;
     }
 
 }
@@ -266,6 +270,10 @@ main {
         height: 10rem;
     }
 
+    #item-card {
+        min-height: 40rem;
+    }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -273,7 +281,15 @@ main {
     #img-home {
         width: 100%;
         height: auto;
-        max-height: 24rem;
+        max-height: 27rem;
+    }
+
+    #item-card {
+        min-height: auto;
+    }
+
+    .footer-text {
+        display: inline-block;
     }
 
 }
