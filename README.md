@@ -758,6 +758,13 @@ All navigation links directed to the correct pages as expected.
 
 Testing was performed on the footer links by clicking the font awesome icons and ensuring that the instagram icon opened instagram in a new tab, the facebook icon opened facebook in a new tab and the twitter icon opened twitter in a new tab and the youtube icon opened youtube in a new tab. These behaved as expected.
 
+## Negative Testing
+
+Tests were performed on posts and comments to ensure that:
+
+1. A user cannot edit and or delete a post that does not belong to him or her
+2. Forms cannot be submitted when required fields are empty
+
 ## Deployment
 
 ### Version Control
