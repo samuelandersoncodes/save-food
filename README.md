@@ -630,6 +630,26 @@ Actual:
 
 User is successfully logged in and redirected to the home page with a success message confirming the sign in.
 
+<hr>
+
+Description:
+
+Ensure a user can sign out
+
+Steps:
+
+1. Login to the website
+2. Click the logout button from the navbar
+3. Click the 'Sign out' button on the logout page
+
+Expected:
+
+User is logged out
+
+Actual:
+
+User is logged out
+
 ## Deployment
 
 ### Version Control
