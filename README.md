@@ -674,6 +674,31 @@ Actual:
 
 Form successfully submits and a success message is displayed to confrim submission.
 
+<hr>
+
+Description:
+
+Ensure an old post can be updated.
+
+Steps:
+
+1. Navigate to [page](https://save-food-3b2a71b51608.herokuapp.com/editpost/<post-id>) or click on the edit post links on  the home or post detail pages.
+2. Change any all or some of the following:
+    - Title: eggs
+    - Previous featured image: old image can remain if you dont want to change it
+    - New featured image: preferred new image
+    - Item description: eggs to give out
+    - Address: a short and precise address
+3. Click Update
+
+Expected:
+
+Form successfully submits and a success message is displayed to confrim update.
+
+Actual:
+
+Form successfully submits and a success message is displayed to confrim update.
+
 ## Deployment
 
 ### Version Control
