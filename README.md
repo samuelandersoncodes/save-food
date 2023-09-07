@@ -722,6 +722,26 @@ Actual:
 
 Post is successfully deleted and a success message is displayed to confrim deletion.
 
+**Comment**
+
+Description:
+
+Ensure comments and messages can be added.
+
+Steps:
+
+1. Navigate to [page]((https://save-food-3b2a71b51608.herokuapp.com/postdetail/<item-title>) or click on the post title, post slug or the 'reserve' button on the home page.
+2. In the body of the chat box (on the right side on big screens or down part of small screens) of the post detail page, write your message.
+3. Click the 'Submit' button
+
+Expected:
+
+Message is successfully added and a success message is displayed to confrim message submission.
+
+Actual:
+
+Message is successfully added and a success message is displayed to confrim message submission.
+
 ## Deployment
 
 ### Version Control
