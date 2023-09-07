@@ -652,6 +652,8 @@ User is logged out
 
 **Posts**
 
+```User must be logged in to perform any of the CRUD operations```
+
 Description:
 
 Ensure a new post can be created.
@@ -675,6 +677,8 @@ Actual:
 Form successfully submits and a success message is displayed to confrim submission.
 
 <hr>
+
+```User must be logged in and be the owner of the respective post to edit and delete posts```
 
 Description:
 
