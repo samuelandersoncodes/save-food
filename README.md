@@ -742,6 +742,18 @@ Actual:
 
 Message is successfully added and a success message is displayed to confrim message submission.
 
+**Navigation Links**
+
+Testing was performed to ensure all navigation links on the respective pages, navigated to the correct pages as per design. This was done by clicking on the navigation links on each page.
+
+- Home -> index.html
+- About -> about.html
+- Logout -> Sign out all auth page
+- Login -> Sign in all auth page
+- Signup -> Sign up all auth page
+
+All navigation links directed to the correct pages as expected.
+
 ## Deployment
 
 ### Version Control
