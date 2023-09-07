@@ -650,6 +650,30 @@ Actual:
 
 User is logged out
 
+**Posts**
+
+Description:
+
+Ensure a new post can be created.
+
+Steps:
+
+1. Navigate to [page](https://save-food-3b2a71b51608.herokuapp.com/addpost/) or click the share button on the home or post detail pages.
+2. Enter the following:
+    - Title: eggs
+    - featured image: eggs.jpg
+    - Item description: fresh eggs to dash out
+    - Address: a short and precise address
+3. Click Post
+
+Expected:
+
+Form successfully submits and a success message is displayed to confrim submission.
+
+Actual:
+
+Form successfully submits and a success message is displayed to confrim submission.
+
 ## Deployment
 
 ### Version Control
