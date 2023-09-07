@@ -18,8 +18,8 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name="food_item_posts")
     updated_on = models.DateTimeField(auto_now=True)
     featured_image = CloudinaryField('image', blank=False)
-    item_description = models.TextField(max_length=60, blank=False)
-    address = models.CharField(max_length=55, blank=False, default='')
+    item_description = models.TextField(max_length=50, blank=False)
+    address = models.CharField(max_length=40, blank=False, default='')
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=1)
     reserve = models.ManyToManyField(
