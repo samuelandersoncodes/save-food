@@ -8,9 +8,7 @@
             <!-- button for user posts-->
             {% if user.is_authenticated %}
             <div class="post-button text-center mb-0">
-                <button type="submit" class="btn btn-secondary mt-1 hvr-grow">
-                    <a class="text-decoration-none text-white" href="{% url 'add_post' %}">Share food</a>
-                </button>
+                <a class="btn btn-secondary hvr-grow" href="{% url 'add_post' %}">Share food</a>
             </div>
             {% endif %}
         </div>
