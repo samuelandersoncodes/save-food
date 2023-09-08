@@ -5,7 +5,7 @@ from .models import Post, Comment
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     """
-    This class customizes the list view of posts 
+    This class customizes the list view of posts
     and pre-populates slugs from the title field
     It also helps to filter post searches
     """
