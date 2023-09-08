@@ -815,6 +815,12 @@ The only warning remained was that bootsrap (which runs in the workspace) is not
 
 ![JS validator](docs/testing/save-food-%20jshint.jpg)
 
+## Lighthouse Report
+
+Lighthouse report showed areas for improvement on Performance. This was related to the images that users upload on the page. There may be some restrictions of the type of images that can be posted but its a free website and allows room for more flexibility. More restrictions on image types may frustrate users and bring down the patronage of the site. For this reason, users are given a wide range of performance-meaningful image options which are not below standard to upload.
+
+![Lighthouse](docs/testing/lighthouse.jpg)
+
 ## Deployment
 
 ### Version Control
