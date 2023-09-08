@@ -11,7 +11,7 @@
     <meta name="keywords" content="food, food stuff, food surplus, food items, leftover">
     <meta name="author" content="Samuel Anderson">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
@@ -82,27 +82,24 @@
         </nav>
     </header>
     <!-- display for alert messages -->
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 offset-md-2 mt-2">
-                    {% for message in messages %}
-                    <div class="alert {{ message.tags }} alert-dismissible fade show" id="message" role="alert">
-                        {{ message | safe }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    {% endfor %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 mt-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show" id="message" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
+                {% endfor %}
             </div>
         </div>
-    </section>
-    <section>
-        <main class="flex-shrink-0 bg-transparent">
-            {% block content %}
-            <!-- content goes here -->
-            {% endblock content%}
-        </main>
-    </section>
+    </div>
+    <!-- main section for templates -->
+    <main class="flex-shrink-0 bg-transparent">
+        {% block content %}
+        <!-- content goes here -->
+        {% endblock content%}
+    </main>
     <!-- Footer -->
     <footer class="footer mt-auto py-4">
         <p class="m-0 text-center">
