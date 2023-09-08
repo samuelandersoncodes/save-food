@@ -862,6 +862,10 @@ Website was also opened on the following devices and no responsive issues were f
 -Dell Latitude 5430
 -Mcbook Retina
 
+## Bugs
+
+The website functions as expected and there are no known bugs.
+
 ## Deployment
 
 ### Version Control
