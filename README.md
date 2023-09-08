@@ -810,6 +810,11 @@ All python files were run through the official [Pep8](https://pep8ci.herokuapp.c
 ![PEP8 test models](docs/testing/test-models-lint.jpg)
 ![PEP8 test froms](docs/testing/test-form-lint.jpg)
 
+JavaScript code was run through the [JSHINT](https://jshint.com) javascript validator. It flagged up issues with esversion:6. This was fixed by adding '// jshint esversion: 6' to the top of the js file.
+The only warning remained was that bootsrap (which runs in the workspace) is not defined. This cannot be dealt with since the Javascript file is tested seperately and cannot in this regard find the bootstrap in the workspace. 
+
+![JS validator](docs/testing/save-food-%20jshint.jpg)
+
 ## Deployment
 
 ### Version Control
