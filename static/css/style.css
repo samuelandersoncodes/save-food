@@ -35,12 +35,6 @@ body {
     padding: 0;
 }
 
-/* home page post card styling */
-#item-card {
-    height: auto;
-    min-height: 44rem;
-}
-
 /* navigation styling */
 .nav-link {
     padding-left: 1.3rem;
@@ -81,6 +75,12 @@ body {
 
 .offcanvas {
     background-color: #e8e9ebd6;
+}
+
+/* home page post card styling */
+.item-card {
+    height: auto; 
+    min-height: 44rem;
 }
 
 /* footer styling */
@@ -129,6 +129,7 @@ footer {
     margin: 1.4rem auto;
     width: 100%;
     height: auto;
+    border: none !important;
 }
 
 /* chat box confirmation text styling */
@@ -171,18 +172,18 @@ footer {
 }
 
 /* home page image styling */
-#img-home {
+.img-home {
     background: no-repeat;
     border-radius: 3px;
     width: 100%;
     height: 20rem;
     overflow: hidden;
 }
-
-/* comment section styling */
+/* post detail page comment styling */
+/* comment card */
 .card {
-    border: none;
     width: 100%;
+    border: none;
 }
 
 .comments {
@@ -211,46 +212,54 @@ main {
 
 /* media queries (in descending order)*/
 /* media queries for big screens */
-@media only screen and (max-width: 1285px) {
+@media only screen and (max-width: 1374px) {
 
-    #item-card {
-        min-height: 46rem;
+    .item-card {
+        min-height: 45.9rem;
+    }
+
+}
+
+@media only screen and (max-width: 1290px) {
+
+    .item-card {
+        min-height: 47rem;
     }
 
 }
 
 @media only screen and (max-width: 1272px) {
 
-    #img-home {
+    .img-home {
         height: 16rem;
     }
 
-    #item-card {
-        min-height: 42rem;
+    .item-card {
+        min-height: 43rem;
     }
 
 }
 
 @media only screen and (max-width: 1111px) {
 
-    #img-home {
+    .img-home {
         height: 14rem;
     }
 
-    #item-card {
-        min-height: 40rem;
+    .item-card {
+        min-height: 42rem;
     }
 
 }
 
 @media only screen and (max-width: 950px) {
 
-    #img-home {
+    .img-home {
         height: 12rem;
     }
 
-    #item-card {
-        min-height: 38rem;
+    .item-card {
+        min-height: 39rem;
     }
 
 }
@@ -258,7 +267,7 @@ main {
 /* media queries for small screens */
 @media only screen and (max-width: 824px) {
 
-    #item-card {
+    .item-card {
         min-height: 38.5rem;
     }
 
@@ -266,25 +275,29 @@ main {
 
 @media only screen and (max-width: 846px) {
 
-    #img-home {
+    .img-home {
         height: 10rem;
     }
 
-    #item-card {
-        min-height: 40rem;
+}
+
+@media only screen and (max-width: 802px) {
+
+    .item-card {
+        min-height: 39.9rem;
     }
 
 }
 
 @media only screen and (max-width: 767px) {
 
-    #img-home {
+    .img-home {
         width: 100%;
         height: auto;
         max-height: 27rem;
     }
 
-    #item-card {
+    .item-card {
         min-height: auto;
     }
 
