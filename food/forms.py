@@ -23,3 +23,8 @@ class PostForm(forms.ModelForm):
         fields = [
             'title', 'featured_image', 'item_description', 'address',
         ]
+
+
+class AddressFilterForm(forms.Form):
+    address = forms.ModelChoiceField(
+        queryset=Post.objects.all(), empty_label="search by address")
