@@ -14,4 +14,5 @@ urlpatterns = [
     path('post_reserved/<slug:slug>/reserve',
          views.Reserve_Food_Item.as_view(), name='post_reserved'),
     path('about/', views.AboutView.as_view(), name='about'),
+    path('filter/', views.filter_posts, name='filter_posts'),
 ]
