@@ -83,6 +83,12 @@ body {
     min-height: 44rem;
 }
 
+/* home page filter form input styling */
+.filter-form {
+    margin: 2px auto;
+    width: 45%;
+}
+
 /* footer styling */
 footer {
     background-color: #e8e9ebdf;
@@ -340,6 +346,10 @@ main {
         display: inline-block;
     }
 
+    .filter-form {
+        width: 80%;
+    }
+
 }
 
 @media only screen and (max-width: 575px) {
@@ -377,6 +387,10 @@ main {
 
         margin-top: 6px;
 
+    }
+
+    .filter-form {
+        width: 100%;
     }
 
 }
