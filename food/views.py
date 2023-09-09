@@ -9,7 +9,7 @@ from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from .forms import CommentForm
-from .forms import PostForm
+from .forms import PostForm, AddressFilterForm
 
 
 class PostList(generic.ListView):
@@ -202,3 +202,16 @@ class Reserve_Food_Item(View):
 class AboutView(TemplateView):
     """about view"""
     template_name = "about.html"
+
+
+def filter_posts(request):
+    """filter view"""
+    query = request.GET.get('search')
+
+    if query:
+        posts = Post.objects.filter(address__icontains=query)
+    else:
+        posts = Post.objects.all()
+
+    return render(
+        request, 'filter_posts.html', {'posts': posts})
