@@ -7,27 +7,83 @@
         <!-- food item post column -->
         <div class="col-12 mt-3 left">
             <div class="row">
+                {% for post in posts %}
                 <div class="col-md-4">
                     <div class="card border mb-4 item-card">
                         <div class="card-body">
-                            <div>
-
-
-
+                            <div class="image-container">
+                                {% if "placeholder" in post.featured_image.url %}
+                                <img class="card-img-top" alt="placeholder image"
+                                    src="../media/images/img_placeholder.webp">
+                                {% else %}
+                                <img class="card-img-top img-home" alt="image of posted food item"
+                                    src=" {{ post.featured_image.url }}">
+                                {% endif %}
+                                <div class="image-flash">
+                                    <p class="author">Posted by: {{ post.author }}</p>
+                                </div>
+                            </div>
+                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                                <h2 class="card-title">{{ post.title }}</h2>
+                                <p class="card-text">{{ post.item_description }}</p>
+                            </a>
+                            <p class="card-text"><strong>Pick up at:</strong> {{ post.address }}</p>
+                            <hr>
+                            <p class="card-text text-muted d-inline-block"> {{ post.created_on}} </p>
+                            <div class="text-center mb-0 pt-4">
+                                {% if not user.is_authenticated %}
+                                <p class="footer-text">
+                                    <a href="{% url 'account_signup' %}" class="text-decoration-none">signup</a>
+                                    or <a href="{% url 'account_login' %}" class="text-decoration-none">login</a>
+                                </p>
+                                <p class="footer-text">
+                                    to reserve this item via chat
+                                </p>
+                                {% endif %}
                             </div>
                             <div class="d-inline-block">
-
+                                {% if user.is_authenticated %}
+                                {% if user.id == post.author.id %}
+                                <p>
+                                    <a href="{% url 'edit_post' post.pk %}" class="px-3">edit post</a>
+                                    <a href="{% url 'delete_post' post.pk %}">delete post</a>
+                                </p>
+                                {% endif %}
+                                {% if not user.id == post.author.id %}
+                                <div>
+                                    <p class="text-center">
+                                        Click <strong>reserve</strong>, message item owner and get the food
+                                    </p>
+                                </div>
+                                {% endif %}
+                                {% endif %}
                             </div>
                             <div>
-
+                                {% if user.is_authenticated %}
+                                <form class="text-center mb-1 mt-3" action="{% url 'post_reserved' post.slug %}"
+                                    method="POST">
+                                    {% csrf_token %}
+                                    {% if not reserved %}
+                                    <button type="submit" name="food_item_posts_id" value="{{post.slug}}"
+                                        class="btn btn-outline-success">reserve</button>
+                                    {% endif %}
+                                    {% endif %}
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
-
+                {% endif %}
+                {% empty %}
+                <div class="text-center mt-4">
+                    <p class="fs-2 text-danger  mt-5">Sorry! Your search found no match</p>
+                    <br>
+                    <a class="btn btn-secondary mb-5 hvr-grow" href="{% url 'home' %}">Back</a>
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -44,5 +100,4 @@
     </nav>
     {% endif %}
 </div>
-
 {% endblock %}
