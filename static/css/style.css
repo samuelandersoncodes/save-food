@@ -79,7 +79,7 @@ body {
 
 /* home page post card styling */
 .item-card {
-    height: auto; 
+    height: auto;
     min-height: 44rem;
 }
 
@@ -179,6 +179,7 @@ footer {
     height: 20rem;
     overflow: hidden;
 }
+
 /* post detail page comment styling */
 /* comment card */
 .card {
@@ -188,6 +189,12 @@ footer {
 
 .comments {
     padding: 0.3rem;
+}
+
+/* post detail image styling */
+.detail-img {
+    width: 100%;
+    max-height: 38rem;
 }
 
 /*  base html main container styling */
@@ -212,6 +219,14 @@ main {
 
 /* media queries (in descending order)*/
 /* media queries for big screens */
+@media only screen and (max-width: 1399px) {
+
+    .detail-img {
+        max-height: 32rem;
+    }
+
+}
+
 @media only screen and (max-width: 1374px) {
 
     .item-card {
@@ -240,6 +255,14 @@ main {
 
 }
 
+@media only screen and (max-width: 1199px) {
+
+    .detail-img {
+        max-height: 28rem;
+    }
+
+}
+
 @media only screen and (max-width: 1111px) {
 
     .img-home {
@@ -248,6 +271,14 @@ main {
 
     .item-card {
         min-height: 42rem;
+    }
+
+}
+
+@media only screen and (max-width: 991px) {
+
+    .detail-img {
+        max-height: 21rem;
     }
 
 }
@@ -295,6 +326,10 @@ main {
         width: 100%;
         height: auto;
         max-height: 27rem;
+    }
+
+    .detail-img {
+        max-height: auto;
     }
 
     .item-card {
