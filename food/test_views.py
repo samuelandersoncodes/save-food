@@ -197,3 +197,25 @@ class TestViews(TestCase):
         response = self.client.get('/about/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'about.html')
+
+    def test_filtered_posts(self):
+        """
+        this function creates a user and post
+        gets the filter posts page url
+        and comfrims that its response status is good
+        """
+        newuser = User.objects.create(username='test', password='test')
+        post = Post.objects.create(
+            title='Banana',
+            slug='banana',
+            author=newuser,
+            item_description='sweet banana',
+            featured_image='banana.jpg',
+            status=1,
+            address='Berlin, 122345'
+        )
+
+        response = self.client.post('/filter_posts/')
+        url = reverse('filter_posts')
+        self.response = self.client.post(url)
+        self.assertEqual(self.response.status_code, 200)
