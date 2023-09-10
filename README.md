@@ -217,10 +217,10 @@ Only owners of posts can through this button tag their respective posts as reser
 The page takes six posts at a go in pagination. Therefore at the bottom of each sixth post is the 'next' button that takes users to older posts. When users are on older posts, they can easily come back to fresher posts by clicking the 'prev' button.
 
 ``Logged in``
-![Info Section logged in](docs/readme_images/save-food-home.jpg)
+![Home page logged in](docs/readme_images/home.jpg)
 
 ``Default``
-![Info Section default](docs/readme_images/save-food-home-d.jpg)
+![Home page default](docs/readme_images/home-d.jpg)
 
 ``As a site owner, I need an about page so that users can know more about the site``
 
