@@ -454,8 +454,7 @@ A 500 error page has been implemented to alert users when an internal server err
 ![Favicon](static/favicon/favicon.ico)
 
 ### Features Left To Implement
-- In a future release I would like to implement a search filter that will help users to quickly find a food item by location, food category and posted time and date. This will save them time as compared to a manual search.
-- The address section will also make use of django's AddressField. This will make it easier for users to input their addresses for food item pick ups.
+- In a future release I would like to implement the address field with the use of django's AddressField. This will make it easier for users to input their addresses for food item pick ups.
 - Users will also be able to sign in with facebook and instagram so as to foster a faster and more convenient site registration.
 
 ## The-Skeleton-Plane
