@@ -4,7 +4,7 @@ Save Food is a web application pilot project that provides the platform for peop
 
 The live link can be found here: [Live Site - Save Food](https://save-food-3b2a71b51608.herokuapp.com/)
 
-![Mock Up](docs/readme_images/save-food-mockup.jpg)
+![Mock Up](docs/readme_images/save-food-mockup.JPG)
 
 ## Table of Contents
 - [Save Food](#save-food)
