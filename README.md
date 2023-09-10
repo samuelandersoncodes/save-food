@@ -135,6 +135,8 @@ As a user, I would like to be able to share a food item so that others can view 
 
 As a user, I would like to view food item posts so that I can choose the needed food item
 
+As a user, I would like to filter food items by address so that I can easily find food items in my area
+
 As a user, I would like to be able to edit a my own food item post so that I can make changes when needed
 
 As a user, I would like to be notified when I make a post, edit or delete one so that I know it was added, updated or deleted successfully
@@ -349,6 +351,26 @@ On the top of this form is a heading that tells the purpose of the page 'to dele
 Only owners of posts are able to delete their posts. When a user clicks on the 'delete' link on the home and or postdetail pages, they are directed to the deletepost page. Where they are asked to confirm the deletion by clicking the 'delete' button or return back to the home page through the 'cancel' button.
 
 ![Edit Post Page](docs/readme_images/delete.jpg)
+
+``As a user, I would like to filter food items by address so that I can easily find food items in my area``
+
+Implementation:
+
+**Filter Post Page**
+
+On the top of the home page right below the 'Share food' button  is the form input with a 'filter by address' placeholder.
+
+All users can through the above input search for (a) food item(s) base on a specific location. Hence, making it easier to sort out food items in their respective areas.
+
+If user enters an existing address substring (eg. a city, street name, zipcode, country etc), related post(s) shows up on the filte-rposts page. If a non existing address or any other contrary entry is made, the "Sorry! your search found no match" is dsplayed. Thus, any address substring that is tied to an existing post is searchable or no result is found.
+
+On top of the filter-posts page is an "All" that makes it easy for the user to see all posts again.
+
+Below the "Sorry! your search found no match" text is a 'Back' button that aids users to get back to the home page.   
+
+![Filter Post Page](docs/readme_images/filtered-posts.jpg)
+
+![Filter Post Page / no match](docs/readme_images/no-match.jpg)
 
 ``As a user, I would like to be notified when I make a post, edit or delete one so that I know it was added, updated or deleted successfully``
 
