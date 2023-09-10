@@ -886,23 +886,23 @@ Website behaved as expected.
 
 Website was also opened on the following devices and no responsive issues were found:
 
--iPhone SE
--Huawei mipad 10
--Iphone 10
--Iphone 12 Xs max
--Iphone 12
--Iphone 13
--Iphone 6S plus
--Xiomi Redme 11 pro
--Samsung A 12
--Samsung Galaxy 20
--Samsung Galaxy Tab S7
--Samsung m21
--Infinix Hot 12
--Asus Sonicmaster
--Hp EliteBook 8440p
--Hp laptop 14s
--Dell Latitude 5430
+-iPhone SE                                                            
+-Huawei mipad 10                                                       
+-Iphone 10                                                        
+-Iphone 12 Xs max                                                         
+-Iphone 12                                                              
+-Iphone 13                                                            
+-Iphone 6S plus                                                  
+-Xiomi Redme 11 pro                                                                     
+-Samsung A 12                                                                 
+-Samsung Galaxy 20                                                                   
+-Samsung Galaxy Tab S7                                                           
+-Samsung m21                                                                     
+-Infinix Hot 12                                                             
+-Asus Sonicmaster                                                       
+-Hp EliteBook 8440p                                                        
+-Hp laptop 14s                                                               
+-Dell Latitude 5430                                                                                    
 -Mcbook Retina
 
 ## Bugs
