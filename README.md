@@ -54,10 +54,10 @@ All projects were assigned to epics, prioritized chronologically as, Must have, 
 
 The Kanban board was created using github projects and can be located [here](https://github.com/users/samuelandersoncodes/projects/1) and can be viewed to see more information on the project cards. All stories except the documentation tasks have a full set of acceptance criteria in order to define the functionality that marks that story as complete.
 
-![Kanban image](docs/readme_images/save-food-kanban.jpg)
+![Kanban image](docs/readme_images/save-food-kanban.JPG)
 
 ### Save Food issues
-![Kanban image](docs/readme_images/save-food-issue.jpg)
+![Kanban image](docs/readme_images/save-food-issues.jpg)
 
 #### Epics
 
