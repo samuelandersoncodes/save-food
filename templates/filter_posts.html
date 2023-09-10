@@ -7,9 +7,11 @@
         <!-- food item post column -->
         <div class="col-12 mt-3 left">
             <div class="row">
+                {% if posts %}
                 <div class="text-center">
                     <a class="btn btn-secondary mb-3 hvr-grow" href="{% url 'home' %}"> A <span> l </span> l </a>
                 </div>
+                {% endif %}
                 {% for post in posts %}
                 <div class="col-md-4">
                     <div class="card border mb-4 item-card">
