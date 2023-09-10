@@ -365,10 +365,15 @@ If user enters an existing address substring (eg. a city, street name, zipcode, 
 
 On top of the filter-posts page is an "All" that makes it easy for the user to see all posts again.
 
-Below the "Sorry! your search found no match" text is a 'Back' button that aids users to get back to the home page.   
+Below the "Sorry! your search found no match" text is a 'Back' button that aids users to get back to the home page.
 
+``filter input``                                                        
+![Filter input](docs/readme_images/filter-input.jpg)
+
+``filtered posts``                                                      
 ![Filter Post Page](docs/readme_images/filtered-posts.jpg)
 
+``no found results``
 ![Filter Post Page / no match](docs/readme_images/no-match.jpg)
 
 ``As a user, I would like to be notified when I make a post, edit or delete one so that I know it was added, updated or deleted successfully``
