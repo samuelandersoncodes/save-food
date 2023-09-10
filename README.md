@@ -806,11 +806,11 @@ Tests were performed on posts and comments to ensure that:
 
 ## Unit Testing
 
-Unit tests were carried out to test core functionality in forms, template views models and redirects. These can be found in the respective test files in the food app.
+Unit tests were carried out to test core functionality in forms, template views, models and redirects. These can be found in the respective test files in the food app.
 
 Results:
 
-![unit tests](docs/testing/coverage_report.jpg)
+![unit tests](docs/testing/coverage.result.jpg)
 
 ## Accessibility
 
