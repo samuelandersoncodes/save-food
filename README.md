@@ -125,6 +125,8 @@ As a developer, I need to implement allauth so that users can sign up and have a
 
 As a Site Owner, I want users to easily sign in with google so that site access and use is not complicated.
 
+As a Site Owner, I want users to be able sign out so that they can leave the site when they are done with its use.
+
 As a site owner, I would like the allauth pages customized so that they match with the sites styling
 
 **EPIC 4 - Food item posts**
@@ -262,6 +264,22 @@ Below that is a "Sign in with google" that enables users to easily sign in with 
 Then comes the form for username, optional email, password and password confirmation fields. Beneath that is the sign up button that enables users to register on the site.
 
 ![Sign up](docs/readme_images/signup-page.jpg)
+
+``As a Site Owner, I want users to be able sign out so that they can leave the site when they are done with its use``
+
+Implementation:
+
+**Logout page**
+
+Upon clicking the logout link on the navbar, users are directed to the logout page to be able to sign out.
+
+On the top of the page is a heading and text that informs the user on the page's purpose and a warning message respectively.
+
+Below that is a "Sign out" button that enable users to sign out.
+
+Then comes the 'back' button that takes the user back if they have a change of mind and want to return back to the home page.
+
+![Log in](docs/readme_images/logout-page.jpg)
 
 ``USER STORY - As a developer, I need to create a footer with social media links so that users can be more informed or communicate with site management``
 
