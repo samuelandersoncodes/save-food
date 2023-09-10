@@ -28,24 +28,23 @@
             <div class="post-button text-center mb-3">
                 <a class="btn btn-secondary hvr-grow" href="{% url 'add_post' %}">Share food</a>
             </div>
-            <!--posts filter form-->
-            <div class="form-row">
-                <div class="col">
-                    <div class="mb-3 filter-form">
-                        {{ form.non_field_errors }}
-                        <form method="get" action=" {% url 'filter_posts' %}" class="input-group">
-                            {{ field.errors }}
-                            {% csrf_token %}
-                            <input type="text" name="search" class="form-control" placeholder="search by address"
-                                required>
-                            <button type="submit">
-                                <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
-                            </button>
-                        </form>
-                    </div>
+            {% endif %}
+        </div>
+        <!--posts filter form-->
+        <div class="form-row">
+            <div class="col">
+                <div class="mb-3 filter-form">
+                    {{ form.non_field_errors }}
+                    <form method="get" action=" {% url 'filter_posts' %}" class="input-group">
+                        {{ field.errors }}
+                        {% csrf_token %}
+                        <input type="text" name="search" class="form-control" placeholder="filter by address" required>
+                        <button type="submit">
+                            <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        </button>
+                    </form>
                 </div>
             </div>
-            {% endif %}
         </div>
         <!-- food item post column -->
         <div class="col-12 mt-0 left">
