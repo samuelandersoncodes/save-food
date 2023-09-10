@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .forms import CommentForm
 from .forms import PostForm
+from .forms import AddressFilterForm
 
 
 class TestCommentForm(TestCase):
@@ -40,6 +41,32 @@ class TestPostForm(TestCase):
         self.assertFalse(form.is_valid())
         self.assertIn('title', form.errors.keys())
         self.assertEqual(form.errors['title'][0], 'This field is required.')
+
+    def test_fields_are_explicit_in_form_metaclass(self):
+        """
+        this function ensures that
+        other fields either than the specified ones
+        are not automatically loaded
+        """
+        form = PostForm()
+        self.assertEqual(form.Meta.fields, [
+            'title', 'featured_image', 'item_description', 'address'])
+
+
+class AddressFilterForm(TestCase):
+    """ address filter form test """
+
+    def test_title_field_is_required(self):
+        """
+        this function instatiates a form without a address
+        checks its validity which turns out to be not valid
+        and finds the title key in the dictionary of form errors
+        then checks for the associated error message
+        """
+        form = PostForm({'address': ''})
+        self.assertFalse(form.is_valid())
+        self.assertIn('address', form.errors.keys())
+        self.assertEqual(form.errors['address'][0], 'This field is required.')
 
     def test_fields_are_explicit_in_form_metaclass(self):
         """
