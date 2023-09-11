@@ -333,10 +333,6 @@ main {
         max-height: 27rem;
     }
 
-    .detail-img {
-        max-height: auto;
-    }
-
     .item-card {
         min-height: auto;
     }
