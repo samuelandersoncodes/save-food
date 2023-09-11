@@ -219,7 +219,6 @@ main {
     font-size: 130%;
     color: black;
     overflow: hidden;
-    text-justify: newspaper;
     text-align: justify;
 }
 
