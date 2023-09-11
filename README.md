@@ -911,7 +911,9 @@ Website was also opened on the following devices and no responsive issues were f
 
 ## Bugs
 
-The website functions as expected and there are no known bugs.
+On a last minute test, The "sign in with Google" at a point popped a 500 internal server error which I have no control over.
+
+Either than that, the website functions as expected and there are no known bugs.
 
 ## Deployment
 
