@@ -60,7 +60,7 @@ class AddressFilterForm(TestCase):
         """
         this function instatiates a form without a address
         checks its validity which turns out to be not valid
-        and finds the title key in the dictionary of form errors
+        and finds the address key in the dictionary of form errors
         then checks for the associated error message
         """
         form = PostForm({'address': ''})
