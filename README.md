@@ -909,11 +909,12 @@ Website was also opened on the following devices and no responsive issues were f
 -Dell Latitude 5430                                                                                    
 -Mcbook Retina
 
-## Bugs
+## Bugs (fixed)
 
-On a last minute test, The "sign in with Google" at a point popped a 500 internal server error which I have no control over.
+On a last minute test, The signing in and signing out at some points popped a 500 internal server.
+The admin social account provider and the site ID in settings were reconfigered and refactored respectively to fix this error.  
 
-Either than that, the website functions as expected and there are no known bugs.
+After which the website in total functions as expected and there are no bugs.
 
 ## Deployment
 
