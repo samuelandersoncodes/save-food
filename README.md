@@ -839,6 +839,10 @@ Due to the django templating language code used in the HTML files, these could n
 
 ![HTML Validator](docs/testing/save-food-w3-validation.jpg)
 
+The css stylesheet was seperately run through the [w3 CSS Validator](https://jigsaw.w3.org/css-validator/validator). Initially there were some warnings and errors due to misuse of values for max-height and text justification for the post detail images and the about page text respectively. Both issues were corrected and the style sheet passed validation.
+
+![CSS Validator](docs/testing/w3-css-validation.jpg)
+
 All python files were run through the official [Pep8](https://pep8ci.herokuapp.com/) validator to ensure all code was pep8 compliant. Some errors were shown due to blank spacing and lines too long. All of these errors were resolved and code passed validator tests.
 
 ![PEP8 views](docs/testing/views-lint.jpg)
