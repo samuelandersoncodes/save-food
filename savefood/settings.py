@@ -32,6 +32,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
     'save-food-3b2a71b51608.herokuapp.com',
     '8000-samuelanderson-savefood-van3cv57nm2.ws-eu104.gitpod.io',
     '127.0.0.1:8000'
@@ -74,7 +76,7 @@ SOCIALACCOUNT_PROVIDERS = {
 
 SOCIALACCOUNT_LOGIN_ON_GET = True
 
-SITE_ID = 3
+SITE_ID = 4
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
@@ -101,6 +103,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'allauth.account.middleware.AccountMiddleware', 
 ]
 
 ROOT_URLCONF = 'savefood.urls'
@@ -183,3 +186,14 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage_MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Development environment conditions
+if DEBUG:
+    INSTALLED_APPS.append("corsheaders")
+    MIDDLEWARE.append("corsheaders.middleware.CorsMiddleware")
+    MIDDLEWARE.remove("django.middleware.csrf.CsrfViewMiddleware")
+    CORS_ORIGIN_ALLOW_ALL = True
+    CORS_ALLOW_CREDENTIALS = False
+    os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
+    ALLOWED_HOSTS.append("*")
